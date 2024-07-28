@@ -7,10 +7,10 @@
 </p>
 <p align="center" style="text-decoration: none;">
 	<a href="https://github.com/f-corvaro/CPP/blob/main/.extra/cpp00.pdf"><img alt="subject" src="https://img.shields.io/badge/subject-CPP00-yellow" /></a>
-    <a href="https://github.com/f-corvaro/CPP/tree/main/CPP00"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/f-corvaro/CPP/tree/main/CPP00?color=blueviolet" /></a>
-    <a href="https://github.com/f-corvaro/CPP/tree/main/CPP00"><img alt="Code language count" src="https://img.shields.io/github/languages/count/f-corvaro/CPP/tree/main/CPP00?color=yellow" /></a>
-    <a href="https://github.com/f-corvaro/CPP/tree/main/CPP00"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/f-corvaro/CPP/tree/main/CPP00?color=blueviolet" /></a>
-    <a href="https://github.com/f-corvaro/CPP/tree/main/CPP00"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/f-corvaro/CPP/tree/main/CPP00?color=yellow" /></a>
+    <a href="https://github.com/f-corvaro/CPP"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/f-corvaro/CPP?color=blueviolet" /></a>
+    <a href="https://github.com/f-corvaro/CPP"><img alt="Code language count" src="https://img.shields.io/github/languages/count/f-corvaro/CPP?color=yellow" /></a>
+    <a href="https://github.com/f-corvaro/CPP"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/f-corvaro/CPP?color=blueviolet" /></a>
+    <a href="https://github.com/f-corvaro/CPP"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/f-corvaro/CPP?color=yellow" /></a>
 </p>
 
 <h3 align="center">Index</h3>
