@@ -15,12 +15,25 @@
 <h3 align="center">Index</h3>
 <p align="center">
 
+<p align="center">
+  <a href="#introduction">Introduction</a><br>
+  <a href="#important-guidelines">Important Guidelines</a><br>
+  <a href="#0-cpp00-c---single-project">0. CPP00 (C++ - single project)</a><br>
+  <a href="#1-cpp01-c---single-project">1. CPP01 (C++ - single project)</a><br>
+  <a href="#2-cpp02-c---single-project">2. CPP02 (C++ - single project)</a><br>
+  <a href="#3-cpp03-c---single-project">3. CPP03 (C++ - single project)</a><br>
+  <a href="#4-cpp04-c---single-project">4. CPP04 (C++ - single project)</a><br>
+  <a href="#5-cpp05-c---single-project">5. CPP05 (C++ - single project)</a><br>
+  <a href="#6-cpp06-c---single-project">6. CPP06 (C++ - single project)</a><br>
+  <a href="#7-cpp07-c---single-project">7. CPP07 (C++ - single project)</a><br>
+  <a href="#8-cpp08-c---single-project">8. CPP08 (C++ - single project)</a><br>
+  <a href="#9-cpp09-c---single-project">9. CPP09 (C++ - single project)</a><br>
+  <a href="#developed-skills">Developed Skills</a><br>
+  <a href="#support-and-contributions">Support and Contributions</a><br>
+  <a href="#author">Author</a><br>
+  
 </p>
 <br>
-
-# Status: Coming Soon
-
-Thank you for your interest! I am currently working hard to bring you exciting updates. Stay tuned for more information coming soon!
 
 ## Introduction
 
@@ -32,6 +45,31 @@ Feel free to explore the projects and dive into the world of C++ programming. Ha
 
 </p>
 <br>
+
+## Important Guidelines
+
+<p align="justify">
+
+To successfully complete the CPP projects, you must adhere to the following guidelines:
+
+- The projects must be compiled with the C++98 standard and using the flags: `-Wall -Werror -Wextra`.
+- Follow the naming conventions for folders, exercises, classes, functions, and files.
+- Write class names in UpperCamelCase format. Files containing class code should be named according to the class name. For example:
+  - `ClassName.hpp`/`ClassName.h`
+  - `ClassName.cpp`
+  - `ClassName.tpp`
+  - If you have a header file containing the definition of a class `BrickWall` representing a brick wall, its name should be `BrickWall.hpp`.
+- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
+- You can use your own coding style (no NORMINETTE), but ensure your code is readable for peers. You can use everything from the standard library.
+- You must not use external libraries such as CPP11 and derived forms, or Boost libraries. It is also forbidden to use `*printf()`, `*alloc()`, and `free()`.
+- Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden.
+- You are allowed to use the STL in Modules 08 and 09 only. This means no containers (e.g., `vector`, `list`, `map`) and no algorithms (anything that requires including the `<algorithm>` header) until then. 
+- When you allocate memory (using the `new` keyword), you must avoid memory leaks.
+- From Module 02 to Module 09, your classes must be designed in the Orthodox Canonical Form, except when explicitly stated otherwise.
+- Any function implementation placed in a header file (except for function templates) will result in a score of 0 for the exercise.
+- You should be able to use each of your headers independently from others. Thus, they must include all the dependencies they need. However, you must avoid the problem of double inclusion by adding include guards.
+  
+</p>
 
 <p align="justify">
 
