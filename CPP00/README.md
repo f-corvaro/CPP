@@ -16,36 +16,37 @@
 <h2 align="center">CPP00</h2>
 
 <h3 align="center">Index</h3>
-<p align="center">
-  <a href="#introduction">Introduction</a><br>
-  <a href="#overview">Overview</a><br>
-  <a href="#folder-structure">Folder Structure</a><br>
-  <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
-  <a href="#theoretical-background">Theoretical Background</a><br>
-  <a href="#namespaces">Namespaces</a><br>
-  <a href="#standard-io-streams">Standard I/O Streams</a><br>
-  <a href="#cout-and-cin">`cout` and `cin`</a><br>
-  <a href="#stdendl">`std::endl`</a><br>
-  <a href="#classes-and-instances">Classes and Instances</a><br>
-  <a href="#this">`this`</a><br>
-  <a href="#initialization-list">Initialization list</a><br>
-  <a href="#const">`const`</a><br>
-  <a href="#visibility">Visibility</a><br>
-  <a href="#class-vs-struct">Class vs Struct</a><br>
-  <a href="#accessors">Accessors</a><br>
-  <a href="#comparisons">Comparisons</a><br>
-  <a href="#non-member-attributes-and-non-member-functions">Non-Member Attributes and Non-Member Functions</a><br>
-  <a href="#pointers-to-members">Pointers to Members</a><br>
-  <a href="#header-files-h-and-hpp">Header Files: `.h` and `.hpp`</a><br>
-  <a href="#dowhile-statement">`do/while` Statement</a><br>
-  <a href="#ternary-operator">Ternary Operator</a><br>
-  <a href="#for-loop-syntax">`for` Loop Syntax</a><br>
-  <a href="#evaluation-process">Evaluation Process</a><br>
-  <a href="#developed-skills">Developed Skills</a><br>
-  <a href="#references">References</a><br>
-  <a href="#support-and-contributions">Support and Contributions</a><br>
-  <a href="#author">Author</a><br>
-</p>
+  <p align="center">
+    <a href="#introduction">Introduction</a><br>
+    <a href="#overview">Overview</a><br>
+    <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+    <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#cpp-vs-c">C++ vs C</a><br>
+    <a href="#namespaces">Namespaces</a><br>
+    <a href="#standard-io-streams">Standard I/O Streams</a><br>
+    <a href="#cout-and-cin">`cout` and `cin`</a><br>
+    <a href="#stdendl">`std::endl`</a><br>
+    <a href="#classes-and-instances">Classes and Instances</a><br>
+    <a href="#this">`this`</a><br>
+    <a href="#initialization-list">Initialization list</a><br>
+    <a href="#const">`const`</a><br>
+    <a href="#visibility">Visibility</a><br>
+    <a href="#class-vs-struct">Class vs Struct</a><br>
+    <a href="#accessors">Accessors</a><br>
+    <a href="#comparisons">Comparisons</a><br>
+    <a href="#non-member-attributes-and-non-member-functions">Non-Member Attributes and Non-Member Functions</a><br>
+    <a href="#pointers-to-members">Pointers to Members</a><br>
+    <a href="#header-files-h-and-hpp">Header Files: `.h` and `.hpp`</a><br>
+    <a href="#dowhile-statement">`do/while` Statement</a><br>
+    <a href="#ternary-operator">Ternary Operator</a><br>
+    <a href="#for-loop-syntax">`for` Loop Syntax</a><br>
+    <a href="#evaluation-process">Evaluation Process</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#references">References</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
+  </p>
 <br>
 
 ## Introduction
@@ -115,6 +116,35 @@ This section provides detailed explanations of the key concepts and principles c
 I will cover new C++ syntax and features, and also include information about syntax without adhering to Norminette guidelines.
 
 </p>
+
+### C++ vs C
+
+<p align="justify">
+
+C++ is a general-purpose programming language created as an extension of the C programming language. It was developed by Bjarne Stroustrup in the early 1980s to provide object-oriented features and other enhancements to the C language. C++ retains the efficiency and flexibility of C while adding support for classes, inheritance, polymorphism, and other features that facilitate the development of complex software systems.
+
+#### Key Differences Between C++ and C
+
+1. **Object-Oriented Programming (OOP)**: C++ supports OOP, which allows developers to create classes and objects, encapsulate data, and define methods. This makes it easier to model real-world entities and manage large codebases. C, on the other hand, is a procedural language that does not support OOP natively.
+
+2. **Standard Template Library (STL)**: C++ includes the STL, a powerful library of generic classes and functions for data structures and algorithms, such as vectors, lists, maps, and algorithms like sort and search. C does not have a standard library for such data structures and algorithms.
+
+3. **Function Overloading and Default Arguments**: C++ allows function overloading, where multiple functions can have the same name but different parameters. It also supports default arguments, allowing functions to be called with fewer arguments than specified. C does not support these features.
+
+4. **References**: C++ introduces references, which are aliases for existing variables. References provide a safer and more convenient way to pass variables to functions compared to pointers. C does not have references.
+
+5. **Memory Management**: While both C and C++ support dynamic memory allocation, C++ provides the `new` and `delete` operators for allocating and deallocating memory, respectively. C uses the `malloc` and `free` functions for memory management.
+
+6. **Type Safety and Strong Typing**: C++ enforces stricter type checking and provides stronger type safety compared to C. This helps catch errors at compile time and improves code reliability.
+
+7. **Inline Functions**: C++ supports inline functions, which can be defined inside the class definition. Inline functions are expanded at the point of call, reducing function call overhead. C does not support inline functions natively.
+
+8. **Exception Handling**: C++ provides built-in support for exception handling using `try`, `catch`, and `throw` keywords. This allows developers to write robust code that can handle runtime errors gracefully. C does not have built-in exception handling.
+
+While C++ builds upon the foundation of C, it introduces many features that enhance code organization, reusability, and maintainability. Understanding these differences is crucial for leveraging the full potential of C++ in software development.
+
+</p>
+
 
 ### Namespaces
 
