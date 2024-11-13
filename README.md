@@ -77,61 +77,61 @@ To successfully complete the CPP projects, you must adhere to the following guid
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 2. [CPP02](https://github.com/f-corvaro/CPP/tree/main/CPP02) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 4. [CPP04](https://github.com/f-corvaro/CPP/tree/main/CPP04) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 5. [CPP05](https://github.com/f-corvaro/CPP/tree/main/CPP05) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 6. [CPP06](https://github.com/f-corvaro/CPP/tree/main/CPP06) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 7. [CPP07](https://github.com/f-corvaro/CPP/tree/main/CPP07) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 8. [CPP08](https://github.com/f-corvaro/CPP/tree/main/CPP08) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 9. [CPP09](https://github.com/f-corvaro/CPP/tree/main/CPP09) (C++ - single project)
 
 **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```3 Peers```
+```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 </p>
 
