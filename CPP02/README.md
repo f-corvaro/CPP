@@ -51,6 +51,7 @@ The project is organized into the following folders:
 ```
 
 <p>
+
 ## Important Guidelines
 
 <p align="justify">
