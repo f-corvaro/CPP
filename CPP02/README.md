@@ -21,13 +21,11 @@
 </p>
 <br>
 
-# Status: Coming Soon
-
-Thank you for your interest! I am currently working hard to bring you exciting updates. Stay tuned for more information coming soon!
-
 ## Introduction
 
 <p align="justify">
+
+C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, often referred to as "C with Classes." The goal of these modules is to introduce you to Object-Oriented Programming (OOP). This will be the starting point of your C++ journey. While many languages are recommended for learning OOP, this project focuses on C++ due to its complexity and rich feature set. To keep things simple, your code will comply with the C++98 standard. Whether you are a beginner or looking to refresh your skills, this project will provide you with the foundational knowledge and practical experience needed to excel in C++ programming.
 
 </p>
 <br>
@@ -36,6 +34,8 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
+Throughout this project, you will explore a wide range of topics, including ad-hoc polymorphism, operator overloading, and the orthodox canonical class form.
+
 </p>
 <br>
 
@@ -43,16 +43,87 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
+The project is organized into the following folders:
+
 ```
+.
+
 ```
 
 <p>
+## Important Guidelines
+
+<p align="justify">
+
+### Compiling
+
+- Compile your code with `c++` and the flags `-Wall -Wextra -Werror`.
+- Your code should still compile if you add the flag `-std=c++98`.
+  
+### Formatting and Naming Conventions
+- The exercise directories will be named as follows: `ex00`, `ex01`, ..., `exn`.
+- Name your files, classes, functions, member functions, and attributes as specified in the guidelines.
+- Write class names in **UpperCamelCase format**. Files containing class code should be named according to the class name. For example:
+  - ClassName.hpp/ClassName.h
+  - ClassName.cpp
+  - ClassName.tpp
+  - If you have a header file containing the definition of a class "BrickWall" representing a brick wall, its name should be `BrickWall.hpp`. 
+- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
+- No specific coding style is enforced in the C++ modules. You can follow your preferred style, but ensure your code is clean and readable for peer evaluators.
+
+### Allowed/Forbidden
+
+- You are not coding in C anymore; it's time for C++! Therefore:
+  - You are allowed to use almost everything from the standard library. Use the C++-specific versions of the C functions you are familiar with.
+  - External libraries, including C++11 (and derived forms) and Boost libraries, are forbidden. The following functions are also forbidden: `*printf()`, `*alloc()`, and `free()`. Using them will result in a grade of 0.
+  - Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden. Violating this rule will result in a grade of -42. **CORRECT USAGE** 
+    ```cpp
+        std::cout << "Hello, World!" << std::endl; // Correct: using std:: prefix
+        using namespace std; // Incorrect: using namespace directive
+        cout << "Hello, World!" << endl; // Incorrect: no std:: prefix
+    ```
+  - The STL is allowed only in Modules 08 and 09. This means no Containers (vector/list/map/etc.) and no Algorithms (anything requiring the `<algorithm>` header) until then. Violating this rule will result in a grade of -42.
+
+### Design Requirements
+- Avoid memory leaks when allocating memory using the `new` keyword.
+- From Module 02 to Module 09, your classes must follow the `Orthodox Canonical Form` unless explicitly stated otherwise.
+    The **Orthodox Canonical Form (OCF)** is a set of four special member functions that every class should implement to ensure proper resource management and copying behavior. These functions are:
+
+    1. **Default Constructor**: A constructor that can be called with no arguments.
+    2. **Destructor**: A function that is called when an object is destroyed to release resources.
+    3. **Copy Constructor**: A constructor that creates a new object as a copy of an existing object.
+    4. **Copy Assignment Operator**: An operator that assigns the values from one object to another existing object.
+
+    #### Example of Orthodox Canonical Form
+
+    ```cpp
+    class MyClass 
+    {
+    public:
+        MyClass(); // Default Constructor
+        ~MyClass(); // Destructor
+        MyClass(const MyClass& other); // Copy Constructor
+        MyClass& operator=(const MyClass& other); // Copy Assignment Operator
+    private:
+        int* data;
+    };
+    ```
+- Implementing functions in a header file (except for function templates) will result in a grade of 0 for the exercise.
+- Each header should be usable independently from others. Include all necessary dependencies and use include guards to prevent double inclusion. Failure to do so will result in a grade of 0.
+
+### Additional Notes
+- You can add additional files if needed to split your code. As these assignments are not verified by a program, feel free to do so as long as you submit the mandatory files.
+- Sometimes, the guidelines of an exercise may seem short, but the examples can show requirements not explicitly written in the instructions.
+- Read each module completely before starting! Really, do it.
+  
+<p>
+<br>
 
 ## Project Requirements - Mandatory Part
 
-### Important Guidelines
-
 <p align="justify">
+
+To successfully complete the project, you need to submit up to `ex02`. To achieve a perfect score of 100, you must also submit `ex03`.
 
 </p>
 
@@ -60,16 +131,49 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
-</p>
+### Ad-hoc Polymorphism
 
-## Evaluation Process
+<p align="justify">
 
-### Correction sheet
-
-<p align="center">
+Ad-hoc polymorphism, also known as function overloading or operator overloading, is a feature in C++98 that allows functions or operators to operate on different types of data. This form of polymorphism enables the same function name or operator to have different implementations based on the types of its arguments. Function overloading allows multiple functions with the same name but different parameter lists to coexist, enabling the compiler to select the appropriate function based on the arguments provided. Operator overloading, on the other hand, allows developers to define custom behaviors for operators when applied to user-defined types. Ad-hoc polymorphism enhances code readability and flexibility by allowing intuitive and type-specific operations, making it easier to work with different data types in a consistent manner.
 
 </p>
 <br>
+
+### Operator Overloading
+
+<p align="justify">
+
+In C++98, operator overloading allows developers to define custom behaviors for operators when they are applied to user-defined types. This feature enhances the readability and usability of classes by enabling intuitive operations on objects, similar to built-in types. Operators such as `+`, `-`, `*`, `==`, and `<<` can be overloaded to perform specific actions tailored to the class. For example, overloading the `+` operator for a `Vector` class can enable the addition of two vector objects. Operator overloading is achieved by defining a special member function or a friend function with the keyword `operator` followed by the operator symbol. It is important to use operator overloading judiciously to maintain code clarity and prevent unexpected behaviors. Properly implemented operator overloading can make classes more intuitive and easier to use, contributing to more expressive and maintainable code.
+
+</p>
+<br>
+
+### Orthodox Canonical Class Form
+
+<p align="justify">
+
+In C++98, the orthodox canonical class form refers to a set of four special member functions that a class should implement to ensure proper resource management and behavior. These functions are the default constructor, copy constructor, copy assignment operator, and destructor. The default constructor initializes objects of the class, ensuring that all member variables are set to a valid state. The copy constructor creates a new object as a copy of an existing object, allowing for safe copying of objects. The copy assignment operator assigns the contents of one object to another existing object, handling self-assignment and ensuring that resources are properly managed. The destructor cleans up resources when an object is destroyed, preventing memory leaks and other resource-related issues. Implementing these functions correctly ensures that objects of the class can be copied, assigned, and destroyed safely, preventing resource leaks and undefined behavior. Adhering to the orthodox canonical form is a best practice in C++98 to achieve robust and maintainable code. Additionally, following this form makes it easier to manage dynamic memory and other resources, as well as to implement advanced features such as exception safety and polymorphism.
+
+</p>
+<br>
+
+### Fixed-point Numbers
+
+<p align="justify">
+
+Fixed-point numbers are a way to represent fractional numbers using a fixed number of digits after the decimal point. Unlike floating-point numbers, which can represent a wide range of values with varying precision, fixed-point numbers have a fixed precision and scale. This makes them particularly useful in applications where consistent precision is required, such as financial calculations and embedded systems. However, C++98 does not include built-in support for fixed-point numbers. Instead, developers need to implement their own fixed-point arithmetic or use third-party libraries to handle fixed-point calculations. This often involves defining custom classes or structures to represent fixed-point numbers and overloading operators to perform arithmetic operations.
+
+</p>
+<br>
+
+## Evaluation Process
+
+<p align="justify">
+
+
+
+</p>
 
 ## Developed Skills
 
@@ -81,7 +185,9 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 ## References
 
-- []()
+- [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
+- [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
+- [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
 
 ## Support and Contributions
 

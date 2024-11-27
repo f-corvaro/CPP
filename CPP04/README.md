@@ -21,13 +21,11 @@
 </p>
 <br>
 
-# Status: Coming Soon
-
-Thank you for your interest! I am currently working hard to bring you exciting updates. Stay tuned for more information coming soon!
-
 ## Introduction
 
 <p align="justify">
+
+C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, often referred to as "C with Classes." The goal of these modules is to introduce you to Object-Oriented Programming (OOP). This will be the starting point of your C++ journey. While many languages are recommended for learning OOP, this project focuses on C++ due to its complexity and rich feature set. To keep things simple, your code will comply with the C++98 standard. Whether you are a beginner or looking to refresh your skills, this project will provide you with the foundational knowledge and practical experience needed to excel in C++ programming.
 
 </p>
 <br>
@@ -71,6 +69,9 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 </p>
 <br>
 
+Sub-typing polymorphism
+Abstract classes and interfaces
+
 ## Developed Skills
 
 <p align="center">
@@ -81,7 +82,9 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 ## References
 
-- []()
+- [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
+- [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
+- [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
 
 ## Support and Contributions
 
