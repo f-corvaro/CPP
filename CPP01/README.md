@@ -21,13 +21,11 @@
 </p>
 <br>
 
-# Status: Coming Soon
-
-Thank you for your interest! I am currently working hard to bring you exciting updates. Stay tuned for more information coming soon!
-
 ## Introduction
 
 <p align="justify">
+
+C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language, often referred to as "C with Classes." The goal of these modules is to introduce you to Object-Oriented Programming (OOP). This will be the starting point of your C++ journey. While many languages are recommended for learning OOP, this project focuses on C++ due to its complexity and rich feature set. To keep things simple, your code will comply with the C++98 standard. Whether you are a beginner or looking to refresh your skills, this project will provide you with the foundational knowledge and practical experience needed to excel in C++ programming.
 
 </p>
 <br>
@@ -36,6 +34,8 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
+Throughout this project, you will explore a wide range of topics, including memory allocation, pointers to members, references, and switch statements.
+
 </p>
 <br>
 
@@ -43,16 +43,88 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
+The project is organized into the following folders:
+
 ```
+.
+
 ```
 
 <p>
 
-## Project Requirements - Mandatory Part
-
-### Important Guidelines
+## Important Guidelines
 
 <p align="justify">
+
+### Compiling
+
+- Compile your code with `c++` and the flags `-Wall -Wextra -Werror`.
+- Your code should still compile if you add the flag `-std=c++98`.
+  
+### Formatting and Naming Conventions
+- The exercise directories will be named as follows: `ex00`, `ex01`, ..., `exn`.
+- Name your files, classes, functions, member functions, and attributes as specified in the guidelines.
+- Write class names in **UpperCamelCase format**. Files containing class code should be named according to the class name. For example:
+  - ClassName.hpp/ClassName.h
+  - ClassName.cpp
+  - ClassName.tpp
+  - If you have a header file containing the definition of a class "BrickWall" representing a brick wall, its name should be `BrickWall.hpp`. 
+- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
+- No specific coding style is enforced in the C++ modules. You can follow your preferred style, but ensure your code is clean and readable for peer evaluators.
+
+### Allowed/Forbidden
+
+- You are not coding in C anymore; it's time for C++! Therefore:
+  - You are allowed to use almost everything from the standard library. Use the C++-specific versions of the C functions you are familiar with.
+  - External libraries, including C++11 (and derived forms) and Boost libraries, are forbidden. The following functions are also forbidden: `*printf()`, `*alloc()`, and `free()`. Using them will result in a grade of 0.
+  - Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden. Violating this rule will result in a grade of -42. **CORRECT USAGE** 
+    ```cpp
+        std::cout << "Hello, World!" << std::endl; // Correct: using std:: prefix
+        using namespace std; // Incorrect: using namespace directive
+        cout << "Hello, World!" << endl; // Incorrect: no std:: prefix
+    ```
+  - The STL is allowed only in Modules 08 and 09. This means no Containers (vector/list/map/etc.) and no Algorithms (anything requiring the `<algorithm>` header) until then. Violating this rule will result in a grade of -42.
+
+### Design Requirements
+- Avoid memory leaks when allocating memory using the `new` keyword.
+- From Module 02 to Module 09, your classes must follow the `Orthodox Canonical Form` unless explicitly stated otherwise.
+    The **Orthodox Canonical Form (OCF)** is a set of four special member functions that every class should implement to ensure proper resource management and copying behavior. These functions are:
+
+    1. **Default Constructor**: A constructor that can be called with no arguments.
+    2. **Destructor**: A function that is called when an object is destroyed to release resources.
+    3. **Copy Constructor**: A constructor that creates a new object as a copy of an existing object.
+    4. **Copy Assignment Operator**: An operator that assigns the values from one object to another existing object.
+
+    #### Example of Orthodox Canonical Form
+
+    ```cpp
+    class MyClass 
+    {
+    public:
+        MyClass(); // Default Constructor
+        ~MyClass(); // Destructor
+        MyClass(const MyClass& other); // Copy Constructor
+        MyClass& operator=(const MyClass& other); // Copy Assignment Operator
+    private:
+        int* data;
+    };
+    ```
+- Implementing functions in a header file (except for function templates) will result in a grade of 0 for the exercise.
+- Each header should be usable independently from others. Include all necessary dependencies and use include guards to prevent double inclusion. Failure to do so will result in a grade of 0.
+
+### Additional Notes
+- You can add additional files if needed to split your code. As these assignments are not verified by a program, feel free to do so as long as you submit the mandatory files.
+- Sometimes, the guidelines of an exercise may seem short, but the examples can show requirements not explicitly written in the instructions.
+- Read each module completely before starting! Really, do it.
+  
+<p>
+<br>
+
+## Project Requirements - Mandatory Part
+
+<p align="justify">
+
+To successfully complete the project, you need to submit up to `ex05`. To achieve a perfect score of 100, you must also submit `ex06`.
 
 </p>
 
@@ -60,16 +132,102 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 <p align="justify">
 
+### Memory Allocation
+
+<p align="justify">
+
+In C++98, dynamic memory allocation is managed using the `new` and `delete` operators. The `new` operator allocates memory on the heap for a single object or an array of objects and returns a pointer to the beginning of the allocated memory. For example, `int* ptr = new int;` allocates memory for a single integer, while `int* arr = new int[10];` allocates memory for an array of 10 integers. It is crucial to release the allocated memory once it is no longer needed to avoid memory leaks. This is done using the `delete` operator for single objects (`delete ptr;`) and the `delete[]` operator for arrays (`delete[] arr;`). 
+
+Proper use of `new` and `delete` ensures efficient memory management and prevents resource leaks in C++98 applications. It is important to note that failing to use `delete` after `new` leads to memory leaks, where allocated memory is not returned to the system. Additionally, using `delete` on memory that was not allocated with `new` or using `delete[]` on memory allocated with `new` (and vice versa) results in undefined behavior. 
+
+To avoid common pitfalls, always initialize pointers to `NULL` in C++98 and check for `NULL` before deleting. This practice helps prevent double deletion and dangling pointers, which can lead to program crashes and unpredictable behavior. For example:
+```cpp
+int* ptr = new int;
+if (ptr != NULL) 
+{
+    delete ptr;
+    ptr = NULL;
+}
+```
+
 </p>
 
-## Evaluation Process
+#### Heap and Stack Allocation
 
-### Correction sheet
+<p align="justify">
 
-<p align="center">
+In C++98, memory can be allocated on the stack or the heap. Stack allocation is used for local variables and is managed automatically by the compiler. Memory allocated on the stack is released when the variable goes out of scope. Stack allocation is fast and efficient but limited in size. It features faster allocation and deallocation compared to heap allocation and is limited by stack size, which can lead to stack overflow for large objects or deep recursion. Heap allocation, on the other hand, is used for dynamic memory allocation and is managed manually using the `new` and `delete` operators. Memory allocated on the heap persists until it is explicitly released using `delete`. Heap allocation provides more flexibility and can handle larger amounts of memory, but it requires careful management to avoid memory leaks and fragmentation. It is suitable for large objects and dynamic data structures, although it features slower allocation and deallocation compared to stack allocation. The lifetime of the allocated memory is controlled by the programmer, and memory must be manually freed to avoid memory leaks.
 
 </p>
 <br>
+
+### References
+
+<p align="justify">
+
+In C++98, references are used as an alias for another variable, providing an alternative name for the same memory location. They are created using the `&` symbol and must be initialized when declared. References are particularly useful for function parameters, allowing functions to modify the original variables without copying large objects. This can lead to more efficient code. Unlike pointers, references cannot be null and do not require dereferencing syntax, making them safer and easier to use. 
+
+Here is an example of using references in a function:
+
+```cpp
+void increment(int &value) 
+{
+    value++;
+}
+
+int main() {
+    int a = 5;
+    increment(a);
+    // a is now 6
+    return 0;
+}
+```
+
+</p>
+<br>
+
+### Switch Statements
+
+<p align="justify">
+
+In C++, a switch statement is a control statement that allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case. When a match is found, the code associated with that case is executed. The switch statement is often used as an alternative to a series of if-else statements, providing a more readable and efficient way to handle multiple conditions. Each case in a switch statement ends with a break statement to prevent the execution from falling through to the next case. If no case matches, the default case is executed, if it is provided.
+
+</p>
+
+### Filestream
+
+<p align="justify">
+
+In C++, filestreams are used to perform input and output operations on files. The standard library provides the `fstream`, `ifstream`, and `ofstream` classes for file handling. `ifstream` is used for reading from files, `ofstream` is used for writing to files, and `fstream` can be used for both reading and writing. Filestreams are opened using the `open` method and closed using the `close` method. They support various operations such as reading, writing, and seeking within the file. Proper handling of filestreams is essential to ensure data integrity and prevent resource leaks.
+
+</p>
+<br>
+
+## Evaluation Process
+
+## Handling Edge Cases
+
+<p align="justify">
+
+For the `ex04` (replace exercise), it is important to handle various edge cases to ensure the robustness and reliability of your program. Here are some key edge cases to consider:
+
+  1. **Incorrect Number of Arguments**
+  2. **Empty Filename**
+  3. **Empty Search String (s1)**
+  4. **File Open Errors**:
+     - If the input file cannot be opened (e.g., it does not exist or there are permission issues).
+     - If the output file cannot be created (e.g., due to permission issues).
+  5. **Empty File**
+  6. **No Occurrences of s1**
+  7. **s1 Equals s2**
+  8. **Large Files**:
+     `yes "Hello, World!" | head -n 1000 > large.txt`
+  9. **Special Characters**
+  10. **File Permissions**
+
+  By considering these edge cases, you can ensure that your program is robust and handles unexpected inputs and errors.
+
+</p>
 
 ## Developed Skills
 
@@ -81,7 +239,9 @@ Thank you for your interest! I am currently working hard to bring you exciting u
 
 ## References
 
-- []()
+- [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
+- [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
+- [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
 
 ## Support and Contributions
 
