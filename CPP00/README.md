@@ -146,6 +146,7 @@ The project is organized into the following folders:
 - Read each module completely before starting! Really, do it.
   
 <p>
+<br>
 
 ## Project Requirements - Mandatory Part
 
@@ -163,15 +164,14 @@ To successfully complete the project, you need to submit at least `ex00` and `ex
 
 This section provides detailed explanations of the key concepts and principles covered in the CPP00 project. It serves as a valuable reference to help you understand the material and complete the exercises. 
 
-I will cover new C++ syntax and features, and also include information about syntax without adhering to Norminette guidelines.
-
 </p>
+<br>
 
 ### C++ vs C
 
 <p align="justify">
 
-C++ is a general-purpose programming language created as an extension of the C programming language. It was developed by Bjarne Stroustrup in the early 1980s to provide object-oriented features and other enhancements to the C language. C++ retains the efficiency and flexibility of C while adding support for classes, inheritance, polymorphism, and other features that facilitate the development of complex software systems.
+C++ retains the efficiency and flexibility of C while adding support for classes, inheritance, polymorphism, and other features that facilitate the development of complex software systems.
 
 #### Key Differences Between C++ and C
 
@@ -187,14 +187,14 @@ C++ is a general-purpose programming language created as an extension of the C p
 
 6. **Type Safety and Strong Typing**: C++ enforces stricter type checking and provides stronger type safety compared to C. This helps catch errors at compile time and improves code reliability.
 
-7. **Inline Functions**: C++ supports inline functions, which can be defined inside the class definition. Inline functions are expanded at the point of call, reducing function call overhead. C does not support inline functions natively.
+7. **Inline Functions**: C++ supports inline functions, which can be defined inside the class definition (not allowed for 42 guidelines). Inline functions are expanded at the point of call, reducing function call overhead. C does not support inline functions natively.
 
 8. **Exception Handling**: C++ provides built-in support for exception handling using `try`, `catch`, and `throw` keywords. This allows developers to write robust code that can handle runtime errors gracefully. C does not have built-in exception handling.
 
 While C++ builds upon the foundation of C, it introduces many features that enhance code organization, reusability, and maintainability. Understanding these differences is crucial for leveraging the full potential of C++ in software development.
 
 </p>
-
+<br>
 
 ### Namespaces
 
@@ -230,7 +230,7 @@ namespace OuterNamespace
 
 In this case, you would call `innerFunction` using `OuterNamespace::InnerNamespace::innerFunction()`.
 
-Additionally, you can use the `using` directive to simplify access to members of a `namespace`:
+Additionally, you can use the `using` directive to simplify access to members of a `namespace`: (not allowed for 42 guidelines)
 
 ```cpp
 #include <iostream>
@@ -249,6 +249,7 @@ int main(void)
 However, be cautious with the `using` directive as it can lead to name conflicts if overused, especially in larger projects.
 
 </p>
+<br>
 
 ### Standard I/O Streams
 
@@ -279,19 +280,19 @@ std::clog << "This is a log message." << std::endl;
 
 You can also use file streams for reading from and writing to files. The `<fstream>` header provides `std::ifstream` for input file streams and `std::ofstream` for output file streams. For example:
 
- ```cpp
-#include <fstream>
+    ```cpp
+    #include <fstream>
 
-std::ofstream outFile("example.txt");
-outFile << "Writing to a file." << std::endl;
-outFile.close();
+    std::ofstream outFile("example.txt");
+    outFile << "Writing to a file." << std::endl;
+    outFile.close();
 
-std::ifstream inFile("example.txt");
-std::string content;
-inFile >> content;
-std::cout << content << std::endl;
-inFile.close();
- ```
+    std::ifstream inFile("example.txt");
+    std::string content;
+    inFile >> content;
+    std::cout << content << std::endl;
+    inFile.close();
+    ```
 
 </p>
 
@@ -349,6 +350,7 @@ std::cout << "Hello, World!\n";
 ```
 
 </p>
+<br>
 
 ### Classes and Instances
 
@@ -360,7 +362,8 @@ These bundled elements are known as member attributes (or data members) and memb
 
 - **Member Attributes**: These are variables that hold the data associated with an object of the class. They define the properties or state of the object. Member attributes are declared within the class definition. For example:
     ```cpp
-    class MyClass {
+    class MyClass 
+    {
     public:
         int myNumber; // Member attribute
     };
@@ -369,7 +372,8 @@ These bundled elements are known as member attributes (or data members) and memb
 
 - **Member Functions**: These are functions that operate on the data members of the class. They define the behaviors or actions that an object of the class can perform. Member functions are also declared within the class definition. For example:
     ```cpp
-    class MyClass {
+    class MyClass 
+    {
     public:
         int myNumber; // Member attribute
 
@@ -401,7 +405,8 @@ Classes can also have **constructors and destructors**:
  - Constructors: Special member functions that are called when an object is instantiated. They are used to initialize objects.
 
  ```cpp
- class MyClass {
+ class MyClass 
+ {
  public:
      int myNumber;
  
@@ -415,7 +420,8 @@ Classes can also have **constructors and destructors**:
  - Destructors: Special member functions that are called when an object is destroyed. They are used to perform cleanup operations.
   
 ```cpp
-  class MyClass {
+  class MyClass 
+  {
     public:
     int myNumber;
  
@@ -429,6 +435,7 @@ Classes can also have **constructors and destructors**:
 Classes can also have access specifiers (public, private, and protected) to control the visibility of their members. By default, members are private if no access specifier is provided.
 
 </p>
+<br>
 
 ### `this`
 
@@ -438,7 +445,8 @@ In C++, `this` is a special pointer available within non-static member functions
 
 For example:
 ```cpp
-class MyClass {
+class MyClass 
+{
 public:
     int myNumber;
 
@@ -457,6 +465,7 @@ In this example, the setNumber and printNumber member functions use the this poi
 The this pointer is also used in method chaining, where member functions return the this pointer to allow multiple function calls on the same object in a single statement.
 
 </p>
+<br>
 
 ### Initialization list
 
@@ -501,6 +510,7 @@ public:
 In this example, the Complex object comp is initialized directly using the initialization list, ensuring efficient and correct initialization.
 
 </p>
+<br>
 
 ### `const`
 
@@ -549,6 +559,7 @@ In C++, the `const` keyword is used to define constants, which are variables who
 Using `const` helps to prevent accidental modifications and makes the code more predictable and easier to understand.
 
 </p>
+<br>
 
 ### Visibility
 
@@ -569,7 +580,8 @@ In C++, visibility refers to the accessibility of class members (attributes and 
 
 - **Private**: Members declared as `private` are accessible only within the class itself. They cannot be accessed directly from outside the class. This is useful for encapsulating data and hiding implementation details.
     ```cpp
-    class MyClass {
+    class MyClass 
+    {
     private:
         int myNumber; // Private member
 
@@ -590,7 +602,8 @@ In C++, visibility refers to the accessibility of class members (attributes and 
 
 - **Protected**: Members declared as `protected` are accessible within the class itself and by derived classes. This is useful for inheritance, allowing derived classes to access and modify the base class's protected members.
     ```cpp
-    class Base {
+    class Base 
+    {
     protected:
         int myNumber; // Protected member
     };
@@ -610,6 +623,7 @@ In C++, visibility refers to the accessibility of class members (attributes and 
 Using access specifiers helps to enforce encapsulation, a key principle of object-oriented programming, by controlling how and where class members can be accessed and modified.
 
 </p>
+<br>
 
 ### Class vs Struct
 
@@ -619,17 +633,18 @@ In C++, both `class` and `struct` are used to define custom data types that can 
 
 - **Default Access Specifier**: The primary difference between `class` and `struct` is the default access specifier. In a `class`, members are `private` by default, meaning they are not accessible from outside the class unless explicitly specified. In a `struct`, members are `public` by default, meaning they are accessible from outside the struct unless explicitly specified.
     ```cpp
-    class MyClass {
+    class MyClass
+    {
     private:
         int myNumber; // Private by default
 
     public:
-        void setNumber(int num) {
+        void setNumber(int num) 
             myNumber = num;
-        }
     };
 
-    struct MyStruct {
+    struct MyStruct 
+    {
         int myNumber; // Public by default
     };
     ```
@@ -653,6 +668,7 @@ In C++, both `class` and `struct` are used to define custom data types that can 
 Despite these differences, the choice between `class` and `struct` often comes down to coding style and convention. In modern C++, `class` is typically used for most user-defined types, while `struct` is reserved for simple data structures.
 
 </p>
+<br>
 
 ### Accessors
 
@@ -662,7 +678,8 @@ Accessors, also known as getter and setter methods, are member functions used to
 
 - **Getter Methods**: Getter methods, or accessors, are used to retrieve the value of a private or protected attribute. They typically return the value of the attribute and do not modify it.
     ```cpp
-    class MyClass {
+    class MyClass 
+    {
     private:
         int myNumber;
 
@@ -747,6 +764,7 @@ In C++, comparisons are used to determine the relationship between two objects o
 Overloading these operators allows objects of custom classes to be compared in a natural and intuitive way, similar to built-in types. This is particularly useful for sorting, searching, and other operations that rely on comparisons.
 
 </p>
+<br>
 
 ### Non-Member Attributes and Non-Member Functions
 
@@ -781,6 +799,7 @@ Non-member functions can also be used in conjunction with classes to provide add
 Using non-member attributes and functions appropriately can help to keep the code modular and maintainable, separating concerns and reducing dependencies between different parts of the program.
 
 </p>
+<br>
 
 ### Pointers to Members
 
@@ -826,6 +845,7 @@ In C++, pointers to members are special types of pointers that can point to non-
 Pointers to members provide a way to access and manipulate class members dynamically, adding flexibility to your code. They are particularly useful in scenarios where you need to work with different members of a class based on runtime conditions.
 
 </p>
+<br>
 
 ### Header Files: `.h` and `.hpp`
 
@@ -864,6 +884,7 @@ In C++, header files are used to declare the interfaces of classes, functions, a
 Regardless of the extension used, header files should include include guards or `#pragma once` to prevent multiple inclusions, which can lead to compilation errors. The choice between `.h` and `.hpp` is often a matter of personal or project-specific preference, and both are widely accepted in the C++ community.
 
 </p>
+<br>
 
 ### `do/while` Statement
 
@@ -881,6 +902,7 @@ do {
 The `do/while` loop is useful when you need to ensure that the loop body is executed at least once, such as when prompting a user for input and validating it within the loop.
 
 </p>
+<br>
 
 ### Ternary Operator
 
@@ -893,6 +915,7 @@ condition ? expression_if_true : expression_if_false;
 ```
 
 </p>
+<br>
 
 ### `for` Loop Syntax
 
@@ -907,7 +930,23 @@ for (initialization; condition; iteration) {
 ```
 
 </p>
+<br>
 
+## Process for ex02
+
+<p align="justify">
+
+To recreate the `Account.cpp` file and obtain the exact log output, you need to implement the `Account` class methods as described in the `Account.hpp`. The log file provides valuable information about the expected behavior of the class methods. The order of implementation should be:
+
+1. **Initialize Static Members**: Initialize the static members of the Account class.
+2. **Constructor**: Implement the constructor to initialize the account with an initial deposit and update the static members.
+3. **Destructor**: Implement the destructor to display the account closure message.
+4. **Static Methods**: Implement the static methods to return the number of accounts, total amount, total deposits, and total withdrawals.
+5. **Display Methods**: Implement the methods to display account information and status.
+6. **Deposit and Withdrawal Methods**: Implement the methods to handle deposits and withdrawals.
+7. **Timestamp Method**: Implement the method to display the current timestamp.
+
+</p>
 
 ## Evaluation Process
 
