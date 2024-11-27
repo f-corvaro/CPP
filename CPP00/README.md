@@ -954,6 +954,8 @@ To recreate the `Account.cpp` file and obtain the exact log output, you need to 
 
 The project will be evaluated by two reviewers who will test all edge cases. This includes handling scenarios such as pressing `Ctrl+D` in `ex01`, and executing the `ADD` or `SEARCH` commands within the `SEARCH` menu. The evaluation aims to ensure that the project meets all specified requirements and handles unexpected inputs gracefully.
 
+A useful tool for viewing the differences between logs is [Diffchecker](https://www.diffchecker.com/).
+
 </p>
 
 ## Developed Skills
