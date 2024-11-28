@@ -1,0 +1,7 @@
+Line with newline character\n
+Line with tab character\t
+Line with carriage return character\r
+Line with backslash \\
+Line with double quotes "
+Line with single quotes '
+Line with mixed special characters \n\t\r\\

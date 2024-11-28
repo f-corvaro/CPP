@@ -17,7 +17,28 @@
 
 <h3 align="center">Index</h3>
 <p align="center">
-
+    <a href="#introduction">Introduction</a><br>
+    <a href="#overview">Overview</a><br>
+    <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
+    <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+    <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#memory-allocation">Memory Allocation</a><br>
+    <a href="#heap-and-stack-allocation">Heap and Stack Allocation</a><br>
+    <a href="#references">References</a><br>
+    <a href="#switch-statements">Switch Statements</a><br>
+    <a href="#filestream">Filestream</a><br>
+    <a href="#evaluation-process">Evaluation Process</a><br>
+    <a href="#handling-edge-cases">Handling Edge Cases</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#references-1">References</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
 </p>
 <br>
 
@@ -47,7 +68,66 @@ The project is organized into the following folders:
 
 ```
 .
-
+├── CPP01
+│   ├── cpp01
+│   │   ├── ex00
+│   │   │   ├── include
+│   │   │   │   └── Zombie.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── newZombie.cpp
+│   │   │   │   ├── randomChump.cpp
+│   │   │   │   └── Zombie.cpp
+│   │   │   └── Makefile
+│   │   ├── ex01
+│   │   │   ├── include
+│   │   │   │   └── Zombie.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── Zombie.cpp
+│   │   │   │   └── zombieHorde.cpp
+│   │   │   └── Makefile
+│   │   ├── ex02
+│   │   │   ├── srcs
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   ├── ex03
+│   │   │   ├── include
+│   │   │   │   ├── HumanA.hpp
+│   │   │   │   ├── HumanB.hpp
+│   │   │   │   └── Weapon.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── HumanA.cpp
+│   │   │   │   ├── HumanB.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── Weapon.cpp
+│   │   │   └── Makefile
+│   │   ├── ex04
+│   │   │   ├── include
+│   │   │   │   └── replace.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── replace.cpp
+│   │   │   ├── test_files
+│   │   │   │   ├── input.txt
+│   │   │   │   ├── large.txt
+│   │   │   │   └── special.txt
+│   │   │   └── Makefile
+│   │   ├── ex05
+│   │   │   ├── include
+│   │   │   │   └── Harl.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Harl.cpp
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   └── ex06
+│   │       ├── include
+│   │       │   └── Harl.hpp
+│   │       ├── srcs
+│   │       │   ├── Harl.cpp
+│   │       │   └── main.cpp
+│   │       └── Makefile
+│   └── README.md
 ```
 
 <p>
