@@ -139,15 +139,6 @@ Inheritance is a fundamental concept in object-oriented programming that allows 
 </p>
 <br>
 
-## Evaluation Process
-
-### Correction sheet
-
-<p align="center">
-
-</p>
-<br>
-
 ## Developed Skills
 
 <p align="center">
