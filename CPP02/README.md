@@ -17,7 +17,26 @@
 
 <h3 align="center">Index</h3>
 <p align="center">
-
+    <a href="#introduction">Introduction</a><br>
+    <a href="#overview">Overview</a><br>
+    <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
+    <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+    <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#ad-hoc-polymorphism">Ad-hoc Polymorphism</a><br>
+    <a href="#operator-overloading">Operator Overloading</a><br>
+    <a href="#orthodox-canonical-class-form">Orthodox Canonical Class Form</a><br>
+    <a href="#fixed-point-numbers">Fixed-point Numbers</a><br>
+    <a href="#evaluation-process">Evaluation Process</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#references">References</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
 </p>
 <br>
 
@@ -47,7 +66,40 @@ The project is organized into the following folders:
 
 ```
 .
-
+├── CPP02
+│   ├── cpp02
+│   │   ├── ex00
+│   │   │   ├── include
+│   │   │   │   └── Fixed.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Fixed.cpp
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   ├── ex01
+│   │   │   ├── include
+│   │   │   │   └── Fixed.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Fixed.cpp
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   ├── ex02
+│   │   │   ├── include
+│   │   │   │   └── Fixed.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Fixed.cpp
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   └── ex03
+│   │       ├── include
+│   │       │   ├── Fixed.hpp
+│   │       │   └── Point.hpp
+│   │       ├── srcs
+│   │       │   ├── bsp.cpp
+│   │       │   ├── Fixed.cpp
+│   │       │   ├── main.cpp
+│   │       │   └── Point.cpp
+│   │       └── Makefile
+│   └── README.md
 ```
 
 <p>
