@@ -32,7 +32,6 @@
     <a href="#operator-overloading">Operator Overloading</a><br>
     <a href="#orthodox-canonical-class-form">Orthodox Canonical Class Form</a><br>
     <a href="#fixed-point-numbers">Fixed-point Numbers</a><br>
-    <a href="#evaluation-process">Evaluation Process</a><br>
     <a href="#developed-skills">Developed Skills</a><br>
     <a href="#references">References</a><br>
     <a href="#support-and-contributions">Support and Contributions</a><br>
@@ -219,14 +218,6 @@ Fixed-point numbers are a way to represent fractional numbers using a fixed numb
 
 </p>
 <br>
-
-## Evaluation Process
-
-<p align="justify">
-
-
-
-</p>
 
 ## Developed Skills
 
