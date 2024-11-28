@@ -125,6 +125,7 @@ Throughout this project, you will explore a wide range of topics, including inhe
 To successfully complete the project, you need to submit up to `ex02`. To achieve a perfect score of 100, you must also submit `ex03`.
 
 </p>
+<br>
 
 ## Theoretical Background
 
