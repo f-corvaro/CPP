@@ -16,13 +16,20 @@
 <h2 align="center">CPP00</h2>
 
 <h3 align="center">Index</h3>
-  <p align="center">
+<p align="center">
     <a href="#introduction">Introduction</a><br>
     <a href="#overview">Overview</a><br>
     <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
     <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
     <a href="#theoretical-background">Theoretical Background</a><br>
-    <a href="#cpp-vs-c">C++ vs C</a><br>
+    <a href="#c-vs-c">C++ vs C</a><br>
+    <a href="#key-differences-between-c-and-c">Key Differences Between C++ and C</a><br>
     <a href="#namespaces">Namespaces</a><br>
     <a href="#standard-io-streams">Standard I/O Streams</a><br>
     <a href="#cout-and-cin">`cout` and `cin`</a><br>
@@ -41,12 +48,13 @@
     <a href="#dowhile-statement">`do/while` Statement</a><br>
     <a href="#ternary-operator">Ternary Operator</a><br>
     <a href="#for-loop-syntax">`for` Loop Syntax</a><br>
+    <a href="#process-for-ex02">Process for ex02</a><br>
     <a href="#evaluation-process">Evaluation Process</a><br>
     <a href="#developed-skills">Developed Skills</a><br>
     <a href="#references">References</a><br>
     <a href="#support-and-contributions">Support and Contributions</a><br>
     <a href="#author">Author</a><br>
-  </p>
+</p>
 <br>
 
 ## Introduction
@@ -75,7 +83,34 @@ The project is organized into the following folders:
 
 ```
 .
-
+├── CPP00
+│   ├── cpp00
+│   │   ├── ex00
+│   │   │   ├── Makefile
+│   │   │   └── megaphone.cpp
+│   │   ├── ex01
+│   │   │   ├── include
+│   │   │   │   ├── Contact.hpp
+│   │   │   │   └── PhoneBook.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Contact.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── PhoneBook.cpp
+│   │   │   └── Makefile
+│   │   └── ex02
+│   │       ├── expected_result
+│   │       │   └── 19920104_091532.log
+│   │       ├── include
+│   │       │   └── Account.hpp
+│   │       ├── srcs
+│   │       │   ├── Account.cpp
+│   │       │   └── tests.cpp
+│   │       └── Makefile
+│   ├── resources
+│   │   ├── 19920104_091532.log
+│   │   ├── Account.hpp
+│   │   └── tests.cpp
+│   └── README.md
 ```
 
 <p>
