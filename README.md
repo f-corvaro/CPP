@@ -14,24 +14,26 @@
 
 <h3 align="center">Index</h3>
 <p align="center">
-
-<p align="center">
-  <a href="#introduction">Introduction</a><br>
-  <a href="#important-guidelines">Important Guidelines</a><br>
-  <a href="#0-cpp00-c---single-project">0. CPP00 (C++ - single project)</a><br>
-  <a href="#1-cpp01-c---single-project">1. CPP01 (C++ - single project)</a><br>
-  <a href="#2-cpp02-c---single-project">2. CPP02 (C++ - single project)</a><br>
-  <a href="#3-cpp03-c---single-project">3. CPP03 (C++ - single project)</a><br>
-  <a href="#4-cpp04-c---single-project">4. CPP04 (C++ - single project)</a><br>
-  <a href="#5-cpp05-c---single-project">5. CPP05 (C++ - single project)</a><br>
-  <a href="#6-cpp06-c---single-project">6. CPP06 (C++ - single project)</a><br>
-  <a href="#7-cpp07-c---single-project">7. CPP07 (C++ - single project)</a><br>
-  <a href="#8-cpp08-c---single-project">8. CPP08 (C++ - single project)</a><br>
-  <a href="#9-cpp09-c---single-project">9. CPP09 (C++ - single project)</a><br>
-  <a href="#developed-skills">Developed Skills</a><br>
-  <a href="#support-and-contributions">Support and Contributions</a><br>
-  <a href="#author">Author</a><br>
-  
+    <a href="#introduction">Introduction</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
+    <a href="#0-cpp00-c---single-project">0. CPP00 (C++ - single project)</a><br>
+    <a href="#1-cpp01-c---single-project">1. CPP01 (C++ - single project)</a><br>
+    <a href="#2-cpp02-c---single-project">2. CPP02 (C++ - single project)</a><br>
+    <a href="#3-cpp03-c---single-project">3. CPP03 (C++ - single project)</a><br>
+    <a href="#4-cpp04-c---single-project">4. CPP04 (C++ - single project)</a><br>
+    <a href="#5-cpp05-c---single-project">5. CPP05 (C++ - single project)</a><br>
+    <a href="#6-cpp06-c---single-project">6. CPP06 (C++ - single project)</a><br>
+    <a href="#7-cpp07-c---single-project">7. CPP07 (C++ - single project)</a><br>
+    <a href="#8-cpp08-c---single-project">8. CPP08 (C++ - single project)</a><br>
+    <a href="#9-cpp09-c---single-project">9. CPP09 (C++ - single project)</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
 </p>
 <br>
 
@@ -50,26 +52,69 @@ Feel free to explore the projects and dive into the world of C++ programming. Ha
 
 <p align="justify">
 
-To successfully complete the CPP projects, you must adhere to the following guidelines:
+### Compiling
 
-- The projects must be compiled with the C++98 standard and using the flags: `-Wall -Werror -Wextra`.
-- Follow the naming conventions for folders, exercises, classes, functions, and files.
-- Write class names in UpperCamelCase format. Files containing class code should be named according to the class name. For example:
-  - `ClassName.hpp`/`ClassName.h`
-  - `ClassName.cpp`
-  - `ClassName.tpp`
-  - If you have a header file containing the definition of a class `BrickWall` representing a brick wall, its name should be `BrickWall.hpp`.
-- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
-- You can use your own coding style (no NORMINETTE), but ensure your code is readable for peers. You can use everything from the standard library.
-- You must not use external libraries such as CPP11 and derived forms, or Boost libraries. It is also forbidden to use `*printf()`, `*alloc()`, and `free()`.
-- Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden.
-- You are allowed to use the STL in Modules 08 and 09 only. This means no containers (e.g., `vector`, `list`, `map`) and no algorithms (anything that requires including the `<algorithm>` header) until then. 
-- When you allocate memory (using the `new` keyword), you must avoid memory leaks.
-- From Module 02 to Module 09, your classes must be designed in the Orthodox Canonical Form, except when explicitly stated otherwise.
-- Any function implementation placed in a header file (except for function templates) will result in a score of 0 for the exercise.
-- You should be able to use each of your headers independently from others. Thus, they must include all the dependencies they need. However, you must avoid the problem of double inclusion by adding include guards.
+- Compile your code with `c++` and the flags `-Wall -Wextra -Werror`.
+- Your code should still compile if you add the flag `-std=c++98`.
   
-</p>
+### Formatting and Naming Conventions
+- The exercise directories will be named as follows: `ex00`, `ex01`, ..., `exn`.
+- Name your files, classes, functions, member functions, and attributes as specified in the guidelines.
+- Write class names in **UpperCamelCase format**. Files containing class code should be named according to the class name. For example:
+  - ClassName.hpp/ClassName.h
+  - ClassName.cpp
+  - ClassName.tpp
+  - If you have a header file containing the definition of a class "BrickWall" representing a brick wall, its name should be `BrickWall.hpp`. 
+- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
+- No specific coding style is enforced in the C++ modules. You can follow your preferred style, but ensure your code is clean and readable for peer evaluators.
+
+### Allowed/Forbidden
+
+- You are not coding in C anymore; it's time for C++! Therefore:
+  - You are allowed to use almost everything from the standard library. Use the C++-specific versions of the C functions you are familiar with.
+  - External libraries, including C++11 (and derived forms) and Boost libraries, are forbidden. The following functions are also forbidden: `*printf()`, `*alloc()`, and `free()`. Using them will result in a grade of 0.
+  - Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden. Violating this rule will result in a grade of -42. **CORRECT USAGE** 
+    ```cpp
+        std::cout << "Hello, World!" << std::endl; // Correct: using std:: prefix
+        using namespace std; // Incorrect: using namespace directive
+        cout << "Hello, World!" << endl; // Incorrect: no std:: prefix
+    ```
+  - The STL is allowed only in Modules 08 and 09. This means no Containers (vector/list/map/etc.) and no Algorithms (anything requiring the `<algorithm>` header) until then. Violating this rule will result in a grade of -42.
+
+### Design Requirements
+- Avoid memory leaks when allocating memory using the `new` keyword.
+- From Module 02 to Module 09, your classes must follow the `Orthodox Canonical Form` unless explicitly stated otherwise.
+    The **Orthodox Canonical Form (OCF)** is a set of four special member functions that every class should implement to ensure proper resource management and copying behavior. These functions are:
+
+    1. **Default Constructor**: A constructor that can be called with no arguments.
+    2. **Destructor**: A function that is called when an object is destroyed to release resources.
+    3. **Copy Constructor**: A constructor that creates a new object as a copy of an existing object.
+    4. **Copy Assignment Operator**: An operator that assigns the values from one object to another existing object.
+
+    #### Example of Orthodox Canonical Form
+
+    ```cpp
+    class MyClass 
+    {
+    public:
+        MyClass(); // Default Constructor
+        ~MyClass(); // Destructor
+        MyClass(const MyClass& other); // Copy Constructor
+        MyClass& operator=(const MyClass& other); // Copy Assignment Operator
+    private:
+        int* data;
+    };
+    ```
+- Implementing functions in a header file (except for function templates) will result in a grade of 0 for the exercise.
+- Each header should be usable independently from others. Include all necessary dependencies and use include guards to prevent double inclusion. Failure to do so will result in a grade of 0.
+
+### Additional Notes
+- You can add additional files if needed to split your code. As these assignments are not verified by a program, feel free to do so as long as you submit the mandatory files.
+- Sometimes, the guidelines of an exercise may seem short, but the examples can show requirements not explicitly written in the instructions.
+- Read each module completely before starting! Really, do it.
+  
+<p>
+<br>
 
 <p align="justify">
 
