@@ -34,6 +34,8 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 
 <p align="justify">
 
+Throughout this project, you will explore a wide range of topics, including inheritance, polymorphism, encapsulation, and abstraction.
+
 </p>
 <br>
 
@@ -42,15 +44,85 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 <p align="justify">
 
 ```
+.
+
 ```
 
 <p>
 
-## Project Requirements - Mandatory Part
-
-### Important Guidelines
+## Important Guidelines
 
 <p align="justify">
+
+### Compiling
+
+- Compile your code with `c++` and the flags `-Wall -Wextra -Werror`.
+- Your code should still compile if you add the flag `-std=c++98`.
+  
+### Formatting and Naming Conventions
+- The exercise directories will be named as follows: `ex00`, `ex01`, ..., `exn`.
+- Name your files, classes, functions, member functions, and attributes as specified in the guidelines.
+- Write class names in **UpperCamelCase format**. Files containing class code should be named according to the class name. For example:
+  - ClassName.hpp/ClassName.h
+  - ClassName.cpp
+  - ClassName.tpp
+  - If you have a header file containing the definition of a class "BrickWall" representing a brick wall, its name should be `BrickWall.hpp`. 
+- Unless specified otherwise, every output message must end with a newline character and be displayed to the standard output.
+- No specific coding style is enforced in the C++ modules. You can follow your preferred style, but ensure your code is clean and readable for peer evaluators.
+
+### Allowed/Forbidden
+
+- You are not coding in C anymore; it's time for C++! Therefore:
+  - You are allowed to use almost everything from the standard library. Use the C++-specific versions of the C functions you are familiar with.
+  - External libraries, including C++11 (and derived forms) and Boost libraries, are forbidden. The following functions are also forbidden: `*printf()`, `*alloc()`, and `free()`. Using them will result in a grade of 0.
+  - Unless explicitly stated otherwise, the `using namespace <ns_name>` and `friend` keywords are forbidden. Violating this rule will result in a grade of -42. **CORRECT USAGE** 
+    ```cpp
+        std::cout << "Hello, World!" << std::endl; // Correct: using std:: prefix
+        using namespace std; // Incorrect: using namespace directive
+        cout << "Hello, World!" << endl; // Incorrect: no std:: prefix
+    ```
+  - The STL is allowed only in Modules 08 and 09. This means no Containers (vector/list/map/etc.) and no Algorithms (anything requiring the `<algorithm>` header) until then. Violating this rule will result in a grade of -42.
+
+### Design Requirements
+- Avoid memory leaks when allocating memory using the `new` keyword.
+- From Module 02 to Module 09, your classes must follow the `Orthodox Canonical Form` unless explicitly stated otherwise.
+    The **Orthodox Canonical Form (OCF)** is a set of four special member functions that every class should implement to ensure proper resource management and copying behavior. These functions are:
+
+    1. **Default Constructor**: A constructor that can be called with no arguments.
+    2. **Destructor**: A function that is called when an object is destroyed to release resources.
+    3. **Copy Constructor**: A constructor that creates a new object as a copy of an existing object.
+    4. **Copy Assignment Operator**: An operator that assigns the values from one object to another existing object.
+
+    #### Example of Orthodox Canonical Form
+
+    ```cpp
+    class MyClass 
+    {
+    public:
+        MyClass(); // Default Constructor
+        ~MyClass(); // Destructor
+        MyClass(const MyClass& other); // Copy Constructor
+        MyClass& operator=(const MyClass& other); // Copy Assignment Operator
+    private:
+        int* data;
+    };
+    ```
+- Implementing functions in a header file (except for function templates) will result in a grade of 0 for the exercise.
+- Each header should be usable independently from others. Include all necessary dependencies and use include guards to prevent double inclusion. Failure to do so will result in a grade of 0.
+
+### Additional Notes
+- You can add additional files if needed to split your code. As these assignments are not verified by a program, feel free to do so as long as you submit the mandatory files.
+- Sometimes, the guidelines of an exercise may seem short, but the examples can show requirements not explicitly written in the instructions.
+- Read each module completely before starting! Really, do it.
+  
+<p>
+<br>
+
+## Project Requirements - Mandatory Part
+
+<p align="justify">
+
+To successfully complete the project, you need to submit up to `ex02`. To achieve a perfect score of 100, you must also submit `ex03`.
 
 </p>
 
@@ -58,9 +130,14 @@ C++ is a general-purpose programming language created by Bjarne Stroustrup as an
 
 <p align="justify">
 
-</p>
+### Inheritance
 
-Inheritance
+<p align="justify">
+
+Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class. The class that inherits is called the derived class, while the class being inherited from is called the base class. Inheritance promotes code reusability and establishes a natural hierarchy between classes. It enables derived classes to extend or modify the functionality of base classes, facilitating the creation of more complex and specialized objects. In C++98, inheritance is implemented using the `:` symbol followed by the access specifier (`public`, `protected`, or `private`) and the base class name. Proper use of inheritance can lead to more organized and maintainable code by reducing redundancy and promoting a clear structure.
+
+</p>
+<br>
 
 ## Evaluation Process
 
