@@ -127,7 +127,7 @@ To successfully complete the project, you need to submit up to `ex02`. To achiev
 </p>
 <br>
 
-### Theoretical Background
+## Theoretical Background
 
 ### Sub-typing Polymorphism
 
