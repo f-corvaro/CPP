@@ -75,13 +75,13 @@ To successfully complete the CPP projects, you must adhere to the following guid
 
 ### 0. [CPP00](https://github.com/f-corvaro/CPP/tree/main/CPP00) (C++ - single project)
 
-**Status:** Coming Soon
+[![fcorvaro's 42 CPP00 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project)
 
-**Status:** Coming Soon
+[![fcorvaro's 42 CPP01 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
