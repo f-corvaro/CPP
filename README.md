@@ -139,7 +139,7 @@ Feel free to explore the projects and dive into the world of C++ programming. Ha
 
 ### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project)
 
-**Status:** Coming Soon
+[![fcorvaro's 42 CPP03 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
