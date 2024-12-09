@@ -17,7 +17,28 @@
 
 <h3 align="center">Index</h3>
 <p align="center">
-
+    <a href="#introduction">Introduction</a><br>
+    <a href="#overview">Overview</a><br>
+    <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
+    <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+    <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#inheritance">Inheritance</a><br>
+    <a href="#construction-and-destruction-order">Construction and Destruction Order</a><br>
+    <a href="#virtual-destructor">Virtual Destructor</a><br>
+    <a href="#understanding-private-vs-protected-class-members">Understanding Private vs. Protected Class Members</a><br>
+    <a href="#shadowing-understanding--wshadow-and--wno-shadow-compiler-flags">Shadowing: Understanding -Wshadow and -Wno-shadow Compiler Flags</a><br>
+    <a href="#understanding-virtual-inheritance-in-c03">Understanding Virtual Inheritance in C++03</a><br>
+    <a href="#understanding-access-modifiers-virtual-pointers-and-virtual-tables-in-c">Understanding Access Modifiers, Virtual Pointers, and Virtual Tables in C++</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#references">References</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
 </p>
 <br>
 
@@ -45,6 +66,49 @@ Throughout this project, you will explore a wide range of topics, including inhe
 
 ```
 .
+├── CPP03
+│   ├── cpp03
+│   │   ├── ex00
+│   │   │   ├── include
+│   │   │   │   └── ClapTrap.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── ClapTrap.cpp
+│   │   │   │   └── main.cpp
+│   │   │   └── Makefile
+│   │   ├── ex01
+│   │   │   ├── include
+│   │   │   │   ├── ClapTrap.hpp
+│   │   │   │   └── ScavTrap.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── ClapTrap.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── ScavTrap.cpp
+│   │   │   └── Makefile
+│   │   ├── ex02
+│   │   │   ├── include
+│   │   │   │   ├── ClapTrap.hpp
+│   │   │   │   ├── FragTrap.hpp
+│   │   │   │   └── ScavTrap.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── ClapTrap.cpp
+│   │   │   │   ├── FragTrap.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   └── ScavTrap.cpp
+│   │   │   └── Makefile
+│   │   └── ex03
+│   │       ├── include
+│   │       │   ├── ClapTrap.hpp
+│   │       │   ├── DiamondTrap.hpp
+│   │       │   ├── FragTrap.hpp
+│   │       │   └── ScavTrap.hpp
+│   │       ├── srcs
+│   │       │   ├── ClapTrap.cpp
+│   │       │   ├── DiamondTrap.cpp
+│   │       │   ├── FragTrap.cpp
+│   │       │   ├── main.cpp
+│   │       │   └── ScavTrap.cpp
+│   │       └── Makefile
+│   └── README.md
 
 ```
 
@@ -196,6 +260,17 @@ On the other hand, the `-Wno-shadow` compiler flag disables these warnings. This
 Virtual inheritance in C++03 is used to solve the diamond problem that arises in multiple inheritance scenarios. When a class inherits from two classes that both inherit from a common base class, it can end up with two copies of the base class. This can lead to ambiguity and redundancy. By using the `virtual` keyword in the inheritance declaration, you ensure that only one instance of the base class is shared among all derived classes. For example, in the context of the C++03 projects at 42 (e.g., ClapTrap, ScavTrap, FragTrap, and DiamondTrap), using virtual inheritance ensures that there is a single, shared instance of the `ClapTrap` base class, preventing the diamond problem and maintaining a clear and efficient class hierarchy.
 
 </p>
+
+#### Understanding Access Modifiers, Virtual Pointers, and Virtual Tables in C++
+
+<p align="justify">
+
+After a discussion with a peer during a code review, I felt compelled to write a paragraph about these concepts.
+
+In C++, access modifiers (public, protected, and private) control the visibility and accessibility of class members. The vpointer (virtual pointer) and vtable (virtual table) are key components in the implementation of polymorphism. When a class contains virtual functions, the compiler generates a vtable for the class, which is an array of pointers to the virtual functions. Each object of the class contains a vpointer that points to the vtable of its class. This mechanism allows dynamic binding, where the appropriate function is called at runtime based on the actual object type, enabling the powerful feature of polymorphism in C++
+
+</p>
+<br>
 
 ## Developed Skills
 
