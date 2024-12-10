@@ -28,7 +28,6 @@
     <a href="#additional-notes">Additional Notes</a><br>
     <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
     <a href="#theoretical-background">Theoretical Background</a><br>
-    <a href="#inheritance">Inheritance</a><br>
     <a href="#construction-and-destruction-order">Construction and Destruction Order</a><br>
     <a href="#virtual-destructor">Virtual Destructor</a><br>
     <a href="#understanding-private-vs-protected-class-members">Understanding Private vs. Protected Class Members</a><br>
@@ -195,14 +194,6 @@ To successfully complete the project, you need to submit up to `ex02`. To achiev
 
 <p align="justify">
 
-### Inheritance
-
-<p align="justify">
-
-Inheritance is a fundamental concept in object-oriented programming that allows a class to inherit properties and behaviors from another class. The class that inherits is called the derived class, while the class being inherited from is called the base class. Inheritance promotes code reusability and establishes a natural hierarchy between classes. It enables derived classes to extend or modify the functionality of base classes, facilitating the creation of more complex and specialized objects. In C++98, inheritance is implemented using the `:` symbol followed by the access specifier (`public`, `protected`, or `private`) and the base class name. Proper use of inheritance can lead to more organized and maintainable code by reducing redundancy and promoting a clear structure.
-
-</p>
-
 #### Construction and Destruction Order:
 
 <p align="justify">
@@ -285,7 +276,7 @@ In C++, access modifiers (public, protected, and private) control the visibility
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
-- [CNR Area Territoriale di Ricerca di Bologna - C++ Virtual Functions](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/32Virtual.html): An Italian reference that explains the concept of virtual functions in C++ and their usage context.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Course Index (Italian)](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/01Indice.html): An Italian reference that provides a comprehensive index of lessons on C++ programming.
 
 ## Support and Contributions
 
