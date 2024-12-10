@@ -48,6 +48,90 @@ Feel free to explore the projects and dive into the world of C++ programming. Ha
 </p>
 <br>
 
+## Overview
+
+<p align="justify">
+
+During the development of these projects, you will study the following main concepts:
+
+### CPP00: Basics, Classes, Objects
+- Introduction to C++
+- Basic Syntax and Data Types
+- Control Structures
+- Functions
+- Namespaces
+- Classes and Objects
+- Member Functions
+- I/O Streams
+- Initialization Lists
+- Static and Const Keywords
+
+### CPP01: Memory Allocation, References, Pointers
+- Memory Allocation
+- Heap and Stack Allocation
+- Copy Constructor
+- Copy Assignment Operator
+- Destructor
+- Function Overloading
+- Operator Overloading
+
+### CPP02: Ad-hoc Polymorphism, Operator Overloading
+- Ad-hoc Polymorphism
+- Operator Overloading
+- Inheritance
+- Virtual Functions
+- Abstract Classes
+
+### CPP03: Inheritance
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+- Construction and Destruction Order
+
+### CPP04: Subtype Polymorphism, Abstract Classes, Interfaces
+- Subtype Polymorphism
+- Interfaces
+- Abstract Classes
+- Multiple Inheritance
+- Diamond Problem
+
+### CPP05: Repetition, Exceptions
+- Exception Handling
+- Standard Exceptions
+- Custom Exceptions
+- RAII (Resource Acquisition Is Initialization)
+
+### CPP06: C++ Casts
+- Type Casting
+- Static Cast
+- Dynamic Cast
+- Const Cast
+- Reinterpret Cast
+
+### CPP07: Templates
+- Function Templates
+- Class Templates
+- Template Specialization
+- Variadic Templates
+
+### CPP08: Templated Containers, Iterators, Algorithms
+- STL (Standard Template Library)
+- Containers
+- Iterators
+- Algorithms
+- Functors
+
+### CPP09: C++98, C++03
+- Smart Pointers
+- Unique Pointer
+- Shared Pointer
+- Weak Pointer
+- Custom Deleters
+
+</p>
+<br>
+
 ## Important Guidelines
 
 <p align="justify">
