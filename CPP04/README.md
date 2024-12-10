@@ -45,7 +45,75 @@ Throughout this project, you will explore a wide range of topics, including inhe
 
 ```
 .
-
+├── CPP04
+│   ├── cpp04
+│   │   ├── ex00
+│   │   │   ├── include
+│   │   │   │   ├── Animal.hpp
+│   │   │   │   ├── Cat.hpp
+│   │   │   │   ├── Dog.hpp
+│   │   │   │   ├── WrongAnimal.hpp
+│   │   │   │   └── WrongCat.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Animal.cpp
+│   │   │   │   ├── Cat.cpp
+│   │   │   │   ├── Dog.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── WrongAnimal.cpp
+│   │   │   │   └── WrongCat.cpp
+│   │   │   └── Makefile
+│   │   ├── ex01
+│   │   │   ├── include
+│   │   │   │   ├── Animal.hpp
+│   │   │   │   ├── Brain.hpp
+│   │   │   │   ├── Cat.hpp
+│   │   │   │   ├── Dog.hpp
+│   │   │   │   ├── WrongAnimal.hpp
+│   │   │   │   └── WrongCat.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Animal.cpp
+│   │   │   │   ├── Brain.cpp
+│   │   │   │   ├── Cat.cpp
+│   │   │   │   ├── Dog.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── WrongAnimal.cpp
+│   │   │   │   └── WrongCat.cpp
+│   │   │   └── Makefile
+│   │   ├── ex02
+│   │   │   ├── include
+│   │   │   │   ├── Animal.hpp
+│   │   │   │   ├── Brain.hpp
+│   │   │   │   ├── Cat.hpp
+│   │   │   │   ├── Dog.hpp
+│   │   │   │   ├── WrongAnimal.hpp
+│   │   │   │   └── WrongCat.hpp
+│   │   │   ├── srcs
+│   │   │   │   ├── Animal.cpp
+│   │   │   │   ├── Brain.cpp
+│   │   │   │   ├── Cat.cpp
+│   │   │   │   ├── Dog.cpp
+│   │   │   │   ├── main.cpp
+│   │   │   │   ├── WrongAnimal.cpp
+│   │   │   │   └── WrongCat.cpp
+│   │   │   └── Makefile
+│   │   └── ex03
+│   │       ├── include
+│   │       │   ├── AMateria.hpp
+│   │       │   ├── Character.hpp
+│   │       │   ├── Cure.hpp
+│   │       │   ├── Ice.hpp
+│   │       │   ├── ICharacter.hpp
+│   │       │   ├── IMateriaSource.hpp
+│   │       │   └── MateriaSource.hpp
+│   │       ├── srcs
+│   │       │   ├── AMateria.cpp
+│   │       │   ├── Character.cpp
+│   │       │   ├── Cure.cpp
+│   │       │   ├── Ice.cpp
+│   │       │   ├── main.cpp
+│   │       │   └── MaterialSource.cpp
+│   │       └── Makefile
+│   └── README.md
 ```
 
 <p>
@@ -160,6 +228,7 @@ In C++98, abstract classes are classes that cannot be instantiated and are desig
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Virtual Functions](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/32Virtual.html): An Italian reference that explains the concept of virtual functions in C++ and their usage context.
 
 ## Support and Contributions
 

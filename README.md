@@ -21,16 +21,7 @@
     <a href="#allowedforbidden">Allowed/Forbidden</a><br>
     <a href="#design-requirements">Design Requirements</a><br>
     <a href="#additional-notes">Additional Notes</a><br>
-    <a href="#0-cpp00-c---single-project">0. CPP00 (C++ - single project)</a><br>
-    <a href="#1-cpp01-c---single-project">1. CPP01 (C++ - single project)</a><br>
-    <a href="#2-cpp02-c---single-project">2. CPP02 (C++ - single project)</a><br>
-    <a href="#3-cpp03-c---single-project">3. CPP03 (C++ - single project)</a><br>
-    <a href="#4-cpp04-c---single-project">4. CPP04 (C++ - single project)</a><br>
-    <a href="#5-cpp05-c---single-project">5. CPP05 (C++ - single project)</a><br>
-    <a href="#6-cpp06-c---single-project">6. CPP06 (C++ - single project)</a><br>
-    <a href="#7-cpp07-c---single-project">7. CPP07 (C++ - single project)</a><br>
-    <a href="#8-cpp08-c---single-project">8. CPP08 (C++ - single project)</a><br>
-    <a href="#9-cpp09-c---single-project">9. CPP09 (C++ - single project)</a><br>
+    <a href="#overview">Overview</a><br>
     <a href="#developed-skills">Developed Skills</a><br>
     <a href="#support-and-contributions">Support and Contributions</a><br>
     <a href="#author">Author</a><br>
@@ -44,90 +35,6 @@
 In this repository, you will find a collection of projects that cover various aspects of C++ programming. Each project is designed to help you master different concepts and techniques in C++ development. Whether you are a beginner or an experienced programmer, these projects will provide you with valuable hands-on experience and enhance your skills.
 
 Feel free to explore the projects and dive into the world of C++ programming. Happy coding!
-
-</p>
-<br>
-
-## Overview
-
-<p align="justify">
-
-During the development of these projects, you will study the following main concepts:
-
-### CPP00: Basics, Classes, Objects
-- Introduction to C++
-- Basic Syntax and Data Types
-- Control Structures
-- Functions
-- Namespaces
-- Classes and Objects
-- Member Functions
-- I/O Streams
-- Initialization Lists
-- Static and Const Keywords
-
-### CPP01: Memory Allocation, References, Pointers
-- Memory Allocation
-- Heap and Stack Allocation
-- Copy Constructor
-- Copy Assignment Operator
-- Destructor
-- Function Overloading
-- Operator Overloading
-
-### CPP02: Ad-hoc Polymorphism, Operator Overloading
-- Ad-hoc Polymorphism
-- Operator Overloading
-- Inheritance
-- Virtual Functions
-- Abstract Classes
-
-### CPP03: Inheritance
-- Inheritance
-- Polymorphism
-- Encapsulation
-- Abstraction
-- Construction and Destruction Order
-
-### CPP04: Subtype Polymorphism, Abstract Classes, Interfaces
-- Subtype Polymorphism
-- Interfaces
-- Abstract Classes
-- Multiple Inheritance
-- Diamond Problem
-
-### CPP05: Repetition, Exceptions
-- Exception Handling
-- Standard Exceptions
-- Custom Exceptions
-- RAII (Resource Acquisition Is Initialization)
-
-### CPP06: C++ Casts
-- Type Casting
-- Static Cast
-- Dynamic Cast
-- Const Cast
-- Reinterpret Cast
-
-### CPP07: Templates
-- Function Templates
-- Class Templates
-- Template Specialization
-- Variadic Templates
-
-### CPP08: Templated Containers, Iterators, Algorithms
-- STL (Standard Template Library)
-- Containers
-- Iterators
-- Algorithms
-- Functors
-
-### CPP09: C++98, C++03
-- Smart Pointers
-- Unique Pointer
-- Shared Pointer
-- Weak Pointer
-- Custom Deleters
 
 </p>
 <br>
@@ -200,64 +107,133 @@ During the development of these projects, you will study the following main conc
 <p>
 <br>
 
+## Overview
+
 <p align="justify">
 
-### 0. [CPP00](https://github.com/f-corvaro/CPP/tree/main/CPP00) (C++ - single project)
+During the development of these projects, you will study the following main concepts:
+
+### 0. [CPP00](https://github.com/f-corvaro/CPP/tree/main/CPP00) (C++ - single project) - Basics, Classes, Objects
+
+- Introduction to C++
+- Basic Syntax and Data Types
+- Control Structures
+- Functions
+- Namespaces
+- Classes and Objects
+- Member Functions
+- I/O Streams
+- Initialization Lists
+- Static and Const Keywords
 
 [![fcorvaro's 42 CPP00 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project)
+### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project) - Memory Allocation, References, Pointers
+
+- Memory Allocation
+- Heap and Stack Allocation
+- Copy Constructor
+- Copy Assignment Operator
+- Destructor
+- Function Overloading
+- Operator Overloading
 
 [![fcorvaro's 42 CPP01 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 2. [CPP02](https://github.com/f-corvaro/CPP/tree/main/CPP02) (C++ - single project)
+### 2. [CPP02](https://github.com/f-corvaro/CPP/tree/main/CPP02) (C++ - single project) - Ad-hoc Polymorphism, Operator Overloading
+
+- Ad-hoc Polymorphism
+- Operator Overloading
+- Inheritance
+- Virtual Functions
+- Abstract Classes
 
 [![fcorvaro's 42 CPP02 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project)
+### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project) - Inheritance
+
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Abstraction
+- Construction and Destruction Order
 
 [![fcorvaro's 42 CPP03 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 4. [CPP04](https://github.com/f-corvaro/CPP/tree/main/CPP04) (C++ - single project)
+### 4. [CPP04](https://github.com/f-corvaro/CPP/tree/main/CPP04) (C++ - single project)- Subtype Polymorphism, Abstract Classes, Interfaces
+
+- Subtype Polymorphism
+- Interfaces
+- Abstract Classes
+- Multiple Inheritance
+- Diamond Problem
+
+[![fcorvaro's 42 CPP04 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+
+```Evaluation Length = 15/30 Mins``` | ```2 Peers``` 
+
+### 5. [CPP05](https://github.com/f-corvaro/CPP/tree/main/CPP05) (C++ - single project) - Repetition, Exceptions
+
+- Exception Handling
+- Standard Exceptions
+- Custom Exceptions
+- RAII (Resource Acquisition Is Initialization)
 
 **Status:** Coming Soon
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 5. [CPP05](https://github.com/f-corvaro/CPP/tree/main/CPP05) (C++ - single project)
+### 6. [CPP06](https://github.com/f-corvaro/CPP/tree/main/CPP06) (C++ - single project) - C++ Casts
+
+- Type Casting
+- Static Cast
+- Dynamic Cast
+- Const Cast
+- Reinterpret Cast
 
 **Status:** Coming Soon
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 6. [CPP06](https://github.com/f-corvaro/CPP/tree/main/CPP06) (C++ - single project)
+### 7. [CPP07](https://github.com/f-corvaro/CPP/tree/main/CPP07) (C++ - single project) - Templates
+
+- Function Templates
+- Class Templates
+- Template Specialization
+- Variadic Templates
 
 **Status:** Coming Soon
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 7. [CPP07](https://github.com/f-corvaro/CPP/tree/main/CPP07) (C++ - single project)
+### 8. [CPP08](https://github.com/f-corvaro/CPP/tree/main/CPP08) (C++ - single project) - Templated Containers, Iterators, Algorithms
+
+- STL (Standard Template Library)
+- Containers
+- Iterators
+- Algorithms
+- Functors
 
 **Status:** Coming Soon
 
 ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
-### 8. [CPP08](https://github.com/f-corvaro/CPP/tree/main/CPP08) (C++ - single project)
+### 9. [CPP09](https://github.com/f-corvaro/CPP/tree/main/CPP09) (C++ - single project) - C++98, C++03
 
-**Status:** Coming Soon
-
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
-
-### 9. [CPP09](https://github.com/f-corvaro/CPP/tree/main/CPP09) (C++ - single project)
+- Smart Pointers
+- Unique Pointer
+- Shared Pointer
+- Weak Pointer
+- Custom Deleters
 
 **Status:** Coming Soon
 
