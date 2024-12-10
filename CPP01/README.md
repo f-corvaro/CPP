@@ -30,6 +30,11 @@
     <a href="#theoretical-background">Theoretical Background</a><br>
     <a href="#memory-allocation">Memory Allocation</a><br>
     <a href="#heap-and-stack-allocation">Heap and Stack Allocation</a><br>
+    <a href="#copy-constructor">Copy Constructor</a><br>
+    <a href="#copy-assignment-operator">Copy Assignment Operator</a><br>
+    <a href="#destructor">Destructor</a><br>
+    <a href="#function-overloading">Function Overloading</a><br>
+    <a href="#operator-overloading">Operator Overloading</a><br>
     <a href="#references">References</a><br>
     <a href="#switch-statements">Switch Statements</a><br>
     <a href="#filestream">Filestream</a><br>
@@ -241,6 +246,110 @@ In C++98, memory can be allocated on the stack or the heap. Stack allocation is 
 </p>
 <br>
 
+#### Copy Constructor
+
+<p align="justify">
+
+A copy constructor in C++ is a special constructor used to create a new object as a copy of an existing object. It is called when an object is passed by value, returned from a function, or explicitly copied. The copy constructor takes a reference to an object of the same class as its parameter. If no copy constructor is defined, the compiler provides a default one that performs a shallow copy. However, for classes that manage dynamic memory or resources, it is often necessary to define a custom copy constructor to perform a deep copy and ensure proper resource management.
+
+Example of a copy constructor:
+
+```cpp
+class MyClass {
+public:
+    int* data;
+
+    // Copy constructor
+    MyClass(const MyClass& other) {
+        data = new int(*other.data);
+    }
+};
+```
+
+</p>
+<br>
+
+#### Copy Assignment Operator
+
+<p align="justify">
+
+The copy assignment operator in C++ is used to assign the contents of one object to another existing object of the same class. It is called when an assignment operation is performed. The copy assignment operator takes a reference to an object of the same class as its parameter and returns a reference to the current object. If no copy assignment operator is defined, the compiler provides a default one that performs a shallow copy. However, for classes that manage dynamic memory or resources, it is often necessary to define a custom copy assignment operator to perform a deep copy and ensure proper resource management.
+
+Example of a copy assignment operator:
+
+```cpp
+class MyClass {
+public:
+    int* data;
+
+    // Copy assignment operator
+    MyClass& operator=(const MyClass& other) {
+        if (this != &other) {
+            delete data;
+            data = new int(*other.data);
+        }
+        return *this;
+    }
+};
+```
+
+</p>
+<br>
+
+#### Destructor
+
+<p align="justify">
+
+A destructor in C++ is a special member function that is called when an object goes out of scope or is explicitly deleted. The destructor is used to release resources allocated by the object, such as dynamic memory, file handles, or network connections. It has the same name as the class, preceded by a tilde (~), and takes no parameters. If no destructor is defined, the compiler provides a default one that performs a shallow cleanup. However, for classes that manage dynamic memory or resources, it is often necessary to define a custom destructor to ensure proper resource cleanup and prevent resource leaks.
+
+Example of a destructor:
+
+```cpp
+class MyClass {
+public:
+    int* data;
+
+    // Destructor
+    ~MyClass() {
+        delete data;
+    }
+};
+```
+
+</p>
+<br>
+
+#### Operatir Overloading
+
+<p align="justify">
+
+Operator overloading in C++ allows custom implementation of operators for user-defined types. This enables objects of custom classes to be manipulated using standard operators, making the code more intuitive and readable. Operators such as +, -, *, /, ==, and << can be overloaded to perform specific operations for custom types. Operator overloading is achieved by defining a special member function or a non-member function with the keyword operator followed by the operator symbol.
+
+Example of operator overloading:
+
+```cpp
+class Complex {
+public:
+    double real, imag;
+
+    Complex(double r, double i) : real(r), imag(i) {}
+
+    // Overload the + operator
+    Complex operator+(const Complex& other) const {
+        return Complex(real + other.real, imag + other.imag);
+    }
+
+    // Overload the << operator for output
+    friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
+        os << c.real << " + " << c.imag << "i";
+        return os;
+    }
+};
+```
+
+</p>
+<br>
+
 ### References
 
 <p align="justify">
@@ -322,6 +431,7 @@ For the `ex04` (replace exercise), it is important to handle various edge cases 
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Course Index (Italian)](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/01Indice.html): An Italian reference that provides a comprehensive index of lessons on C++ programming.
 
 ## Support and Contributions
 
