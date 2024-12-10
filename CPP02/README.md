@@ -28,8 +28,10 @@
     <a href="#additional-notes">Additional Notes</a><br>
     <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
     <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#inheritance">Inheritance</a><br>
+    <a href="#virtual-functions">Virtual Functions</a><br>
+    <a href="#abstract-classes">Abstract Classes</a><br>
     <a href="#ad-hoc-polymorphism">Ad-hoc Polymorphism</a><br>
-    <a href="#operator-overloading">Operator Overloading</a><br>
     <a href="#orthodox-canonical-class-form">Orthodox Canonical Class Form</a><br>
     <a href="#fixed-point-numbers">Fixed-point Numbers</a><br>
     <a href="#developed-skills">Developed Skills</a><br>
@@ -183,20 +185,88 @@ To successfully complete the project, you need to submit up to `ex02`. To achiev
 
 <p align="justify">
 
+### Inheritance
+
+<p align="justify">
+
+Inheritance is a fundamental concept in object-oriented programming that allows a class (derived class) to inherit properties and behaviors (methods) from another class (base class). This promotes code reuse and establishes a natural hierarchy between classes. In C++98, inheritance is implemented using the `:` symbol followed by the access specifier (`public`, `protected`, or `private`) and the base class name. The derived class inherits all accessible members of the base class, and it can also add new members or override existing ones. Inheritance enables polymorphism, where a base class pointer or reference can point to objects of derived classes, allowing for dynamic method binding and more flexible code design.
+
+Example of inheritance:
+```cpp
+class Base 
+{
+  public:
+      void display()
+          std::cout << "Base class display" << std::endl;
+};
+
+class Derived : public Base 
+{
+  public:
+      void display() 
+          std::cout << "Derived class display" << std::endl;
+};
+```
+
+</p>
+<br>
+
+### Virtual Functions
+
+<p align="justify">
+
+Virtual functions in C++98 allow derived classes to override methods of the base class, enabling dynamic polymorphism. A virtual function is declared using the virtual keyword in the base class. When a base class pointer or reference points to a derived class object, the overridden method in the derived class is called, even if the call is made through the base class pointer or reference. This behavior is achieved through a mechanism called the virtual table (vtable), which stores pointers to virtual functions. Virtual functions are essential for implementing polymorphic behavior and designing flexible and extensible class hierarchies.
+
+Example of virtual functions:
+
+```cpp
+class Base {
+public:
+    virtual void display() {
+        std::cout << "Base class display" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        std::cout << "Derived class display" << std::endl;
+    }
+};
+```
+
+</p>
+<br>
+
+### Abstract Classes
+
+<p align="justify">
+Abstract classes in C++98 are classes that cannot be instantiated and are designed to be inherited by other classes. They serve as a blueprint for derived classes and often contain pure virtual functions, which are declared by assigning 0 to the virtual function. A class containing at least one pure virtual function is considered abstract. Abstract classes are used to define interfaces and enforce a contract for derived classes to implement specific methods. They provide a way to achieve polymorphism and design flexible and extensible software architectures.
+
+Example of an abstract class:
+
+```cpp
+class AbstractBase {
+public:
+    virtual void display() = 0; // Pure virtual function
+};
+
+class Derived : public AbstractBase {
+public:
+    void display() override {
+        std::cout << "Derived class display" << std::endl;
+    }
+};
+```
+
+</p>
+<br>
+
 ### Ad-hoc Polymorphism
 
 <p align="justify">
 
 Ad-hoc polymorphism, also known as function overloading or operator overloading, is a feature in C++98 that allows functions or operators to operate on different types of data. This form of polymorphism enables the same function name or operator to have different implementations based on the types of its arguments. Function overloading allows multiple functions with the same name but different parameter lists to coexist, enabling the compiler to select the appropriate function based on the arguments provided. Operator overloading, on the other hand, allows developers to define custom behaviors for operators when applied to user-defined types. Ad-hoc polymorphism enhances code readability and flexibility by allowing intuitive and type-specific operations, making it easier to work with different data types in a consistent manner.
-
-</p>
-<br>
-
-### Operator Overloading
-
-<p align="justify">
-
-In C++98, operator overloading allows developers to define custom behaviors for operators when they are applied to user-defined types. This feature enhances the readability and usability of classes by enabling intuitive operations on objects, similar to built-in types. Operators such as `+`, `-`, `*`, `==`, and `<<` can be overloaded to perform specific actions tailored to the class. For example, overloading the `+` operator for a `Vector` class can enable the addition of two vector objects. Operator overloading is achieved by defining a special member function or a friend function with the keyword `operator` followed by the operator symbol. It is important to use operator overloading judiciously to maintain code clarity and prevent unexpected behaviors. Properly implemented operator overloading can make classes more intuitive and easier to use, contributing to more expressive and maintainable code.
 
 </p>
 <br>
@@ -232,7 +302,7 @@ Fixed-point numbers are a way to represent fractional numbers using a fixed numb
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
-- [CNR Area Territoriale di Ricerca di Bologna - C++ Virtual Functions](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/32Virtual.html): An Italian reference that explains the concept of virtual functions in C++ and their usage context.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Course Index (Italian)](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/01Indice.html): An Italian reference that provides a comprehensive index of lessons on C++ programming.
 
 ## Support and Contributions
 
