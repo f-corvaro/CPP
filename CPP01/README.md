@@ -33,7 +33,6 @@
     <a href="#copy-constructor">Copy Constructor</a><br>
     <a href="#copy-assignment-operator">Copy Assignment Operator</a><br>
     <a href="#destructor">Destructor</a><br>
-    <a href="#function-overloading">Function Overloading</a><br>
     <a href="#operator-overloading">Operator Overloading</a><br>
     <a href="#references">References</a><br>
     <a href="#switch-statements">Switch Statements</a><br>
@@ -319,7 +318,7 @@ public:
 </p>
 <br>
 
-#### Operatir Overloading
+#### Operator Overloading
 
 <p align="justify">
 
