@@ -28,8 +28,11 @@
     <a href="#additional-notes">Additional Notes</a><br>
     <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
     <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#oop-what-is-it">OOP: What is it?</a><br>
     <a href="#c-vs-c">C++ vs C</a><br>
-    <a href="#key-differences-between-c-and-c">Key Differences Between C++ and C</a><br>
+    <a href="#basic-syntax-and-data-types">Basic Syntax and Data Types</a><br>
+    <a href="#control-structures">Control Structures</a><br>
+    <a href="#functions">Functions</a><br>
     <a href="#namespaces">Namespaces</a><br>
     <a href="#standard-io-streams">Standard I/O Streams</a><br>
     <a href="#cout-and-cin">`cout` and `cin`</a><br>
@@ -41,13 +44,9 @@
     <a href="#visibility">Visibility</a><br>
     <a href="#class-vs-struct">Class vs Struct</a><br>
     <a href="#accessors">Accessors</a><br>
-    <a href="#comparisons">Comparisons</a><br>
     <a href="#non-member-attributes-and-non-member-functions">Non-Member Attributes and Non-Member Functions</a><br>
     <a href="#pointers-to-members">Pointers to Members</a><br>
     <a href="#header-files-h-and-hpp">Header Files: `.h` and `.hpp`</a><br>
-    <a href="#dowhile-statement">`do/while` Statement</a><br>
-    <a href="#ternary-operator">Ternary Operator</a><br>
-    <a href="#for-loop-syntax">`for` Loop Syntax</a><br>
     <a href="#process-for-ex02">Process for ex02</a><br>
     <a href="#evaluation-process">Evaluation Process</a><br>
     <a href="#developed-skills">Developed Skills</a><br>
@@ -192,12 +191,24 @@ To successfully complete the project, you need to submit at least `ex00` and `ex
 
 </p>
 
-
 ## Theoretical Background
 
 <p align="justify">
 
 This section provides detailed explanations of the key concepts and principles covered in the CPP00 project. It serves as a valuable reference to help you understand the material and complete the exercises. 
+
+</p>
+<br>
+
+### OOP: What is it?
+
+<p align="justify">
+
+A programming language has two main purposes:
+1. To provide the means for the programmer to specify the actions to be executed;
+2. To provide a set of concepts to think about what can be done.
+
+For the first point, C was designed to be close to machine language and provide clear and concise instructions to the machine. For the second, Object-Oriented Programming (OOP) was implemented in C++ to offer greater capabilities compared to C. OOP introduces abstract concepts such as classes, instances, encapsulation, function and operator overloading, constructors and destructors, inheritance, polymorphism, virtual functions, and templates. The C++ standard library includes classes for input-output (iostream) and strings, container classes (vector, list, queue, stack, map, etc.), algorithms, and iterators. C++ originated as "C with classes."
 
 </p>
 <br>
@@ -222,7 +233,7 @@ C++ retains the efficiency and flexibility of C while adding support for classes
 
 6. **Type Safety and Strong Typing**: C++ enforces stricter type checking and provides stronger type safety compared to C. This helps catch errors at compile time and improves code reliability.
 
-7. **Inline Functions**: C++ supports inline functions, which can be defined inside the class definition (not allowed for 42 guidelines). Inline functions are expanded at the point of call, reducing function call overhead. C does not support inline functions natively.
+7. **Inline Functions**: C++ supports inline functions, which can be defined inside the class definition. Inline functions are expanded at the point of call, reducing function call overhead. C does not support inline functions natively.
 
 8. **Exception Handling**: C++ provides built-in support for exception handling using `try`, `catch`, and `throw` keywords. This allows developers to write robust code that can handle runtime errors gracefully. C does not have built-in exception handling.
 
@@ -230,6 +241,226 @@ While C++ builds upon the foundation of C, it introduces many features that enha
 
 </p>
 <br>
+
+### Basic Syntax and Data types
+
+<p align="justify">
+
+C++ syntax is similar to C but includes additional features and enhancements. Here are some basic syntax elements and data types in C++:
+
+- **Variables**: Variables must be declared before they are used. The syntax for declaring a variable is:
+    ```cpp
+    int myNumber;
+    float myFloat;
+    char myChar;
+    bool myBool;
+    ```
+
+- **Data Types**: C++ supports various data types, including:
+    - **int**: Integer type, used for whole numbers.
+    - **float**: Floating-point type, used for single-precision decimal numbers.
+    - **double**: Double-precision floating-point type, used for more precise decimal numbers.
+    - **char**: Character type, used for single characters.
+    - **bool**: Boolean type, used for true/false values.
+    - **string**: String type, used for sequences of characters (requires the `<string>` header).
+
+- **Constants**: Constants are declared using the `const` keyword and cannot be modified after initialization. Let's see some examples:
+    
+
+  - **Constant Variables**: When `const` is used with a variable, it makes the variable read-only.
+      ```cpp
+      const int myConst = 10;
+      // myConst = 20; // Error: cannot modify a const variable
+      ```
+
+  - **Constant Pointers**: `const` can be used with pointers to make the pointer itself, the data it points to, or both, constant.
+      ```cpp
+      int value = 10;
+      const int* ptr = &value; // Pointer to constant data
+      // *ptr = 20; // Error: cannot modify the data through the pointer
+
+      int* const constPtr = &value; // Constant pointer
+      *constPtr = 20; // Allowed: can modify the data
+      // constPtr = &anotherValue; // Error: cannot change the pointer itself
+      ```
+
+  - **Constant Member Functions**: When `const` is used with member functions, it indicates that the function does not modify any member variables of the class.
+      ```cpp
+      class MyClass 
+      {
+        public:
+            int myNumber;
+
+            void printNumber() const 
+            {
+                // myNumber = 10; // Error: cannot modify member variable
+                std::cout << myNumber << std::endl;
+            }
+      };
+      ```
+
+  - **Constant Function Parameters**: `const` can be used with function parameters to prevent the function from modifying the arguments passed to it.
+      ```cpp
+      void printValue(const int value) 
+      {
+          // value = 20; // Error: cannot modify a const parameter
+          std::cout << value << std::endl;
+      }
+      ```
+
+- **Operators**: C++ supports various operators, including arithmetic (`+`, `-`, `*`, `/`, `%`), relational (`==`, `!=`, `<`, `>`, `<=`, `>=`), logical (`&&`, `||`, `!`), and assignment (`=`, `+=`, `-=`, `*=`, `/=`, `%=`).
+
+    Overloading these operators allows objects of custom classes to be compared in a natural and intuitive way, similar to built-in types. This is particularly useful for sorting, searching, and other operations that rely on comparisons.
+
+- **Comments**: Single-line comments start with `//`, and multi-line comments are enclosed in `/* */`.
+    ```cpp
+    // This is a single-line comment
+    /* This is a
+       multi-line comment */
+    ```
+
+</p>
+
+### Control Structures
+
+<p align="justify">
+
+Control structures in C++ allow you to control the flow of execution in your programs. Here are some common control structures:
+
+- **if-else**: Used for conditional execution of code blocks.
+    ```cpp
+    if (condition) 
+    {
+        // Code to execute if condition is true
+    } else 
+    {
+        // Code to execute if condition is false
+    }
+    ```
+
+- **switch-case**: Used for multi-way branching based on the value of an expression.
+    ```cpp
+    switch (expression) 
+    {
+        case value1:
+            // Code to execute if expression == value1
+            break;
+        case value2:
+            // Code to execute if expression == value2
+            break;
+        default:
+            // Code to execute if expression does not match any case
+            break;
+    }
+    ```
+
+- **for loop**: Used for iterating over a range of values.
+    ```cpp
+    for (initialization; condition; increment) 
+    {
+        // Code to execute in each iteration
+    }
+    ```
+
+- **while loop**: Used for repeating a block of code while a condition is true.
+    ```cpp
+    while (condition) 
+    {
+        // Code to execute while condition is true
+    }
+    ```
+
+- **do-while loop**: Similar to the while loop, but the condition is checked after the loop body is executed, ensuring the loop body is executed at least once.
+    ```cpp
+    do 
+    {
+        // Code to execute
+    } while (condition);
+    ```
+
+- **Ternary Operator**: A concise way to perform conditional operations. It is also known as the conditional operator and is represented by the `?` and `:` symbols. The ternary operator takes three operands: a condition, an expression to evaluate if the condition is true, and an expression to evaluate if the condition is false. 
+    ```cpp
+    condition ? expression_if_true : expression_if_false;
+    ```
+
+</p>
+
+### Functions
+
+<p align="justify">
+
+Functions in C++ allow you to encapsulate code into reusable blocks. Here are some key concepts related to functions:
+
+- **Function Definition**: A function is defined with a return type, a name, and a parameter list.
+    ```cpp
+    int add(int a, int b) 
+    {
+        return (a + b);
+    }
+    ```
+
+- **Function Declaration**: A function can be declared before it is defined, allowing it to be called before its definition.
+    ```cpp
+    int add(int a, int b); // Function declaration
+    ```
+
+- **Function Overloading**: C++ allows multiple functions with the same name but different parameter lists. This is known as function overloading. It enables functions to handle different types or numbers of arguments while maintaining the same function name, improving code readability and usability.
+
+    Function overloading is resolved at compile time based on the number and types of arguments passed to the function. Here are some key points about function overloading:
+
+    - Functions must differ in the number or type of their parameters.
+    - The return type of the functions can be different, but it is not considered for overloading.
+    - Overloaded functions cannot be distinguished by their return type alone.
+
+    Example of function overloading:
+    ```cpp
+    int add(int a, int b) 
+    {
+        return a + b;
+    }
+
+    double add(double a, double b) 
+    {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) 
+    {
+        return a + b + c;
+    }
+    ```
+
+    In this example:
+    - The first `add` function takes two `int` parameters.
+    - The second `add` function takes two `double` parameters.
+    - The third `add` function takes three `int` parameters.
+
+    The compiler determines which function to call based on the arguments provided:
+    ```cpp
+    int result1 = add(1, 2);       // Calls the first add function
+    double result2 = add(1.5, 2.5); // Calls the second add function
+    int result3 = add(1, 2, 3);    // Calls the third add function
+    ```
+
+- **Default Arguments**: Functions can have default arguments, which are used if no arguments are provided for those parameters.
+    ```cpp
+    void printMessage(std::string message = "Hello, World!") 
+    {
+        std::cout << message << std::endl;
+    }
+    ```
+
+- **Inline Functions**: Functions defined with the `inline` keyword are expanded at the point of call, reducing function call overhead. 
+    ```cpp
+    inline int multiply(int a, int b) 
+    {
+        return a * b;
+    }
+    ```
+
+Functions help to organize code, improve readability, and promote code reuse. They are a fundamental building block of C++ programming.
+
+</p>
 
 ### Namespaces
 
@@ -547,55 +778,6 @@ In this example, the Complex object comp is initialized directly using the initi
 </p>
 <br>
 
-### `const`
-
-<p align="justify">
-
-In C++, the `const` keyword is used to define constants, which are variables whose value cannot be changed after initialization. It can be applied to variables, pointers, member functions, and function parameters to enforce immutability and enhance code safety and readability.
-
-- **Constant Variables**: When `const` is used with a variable, it makes the variable read-only.
-    ```cpp
-    const int myConst = 10;
-    // myConst = 20; // Error: cannot modify a const variable
-    ```
-
-- **Constant Pointers**: `const` can be used with pointers to make the pointer itself, the data it points to, or both, constant.
-    ```cpp
-    int value = 10;
-    const int* ptr = &value; // Pointer to constant data
-    // *ptr = 20; // Error: cannot modify the data through the pointer
-
-    int* const constPtr = &value; // Constant pointer
-    *constPtr = 20; // Allowed: can modify the data
-    // constPtr = &anotherValue; // Error: cannot change the pointer itself
-    ```
-
-- **Constant Member Functions**: When `const` is used with member functions, it indicates that the function does not modify any member variables of the class.
-    ```cpp
-    class MyClass {
-    public:
-        int myNumber;
-
-        void printNumber() const {
-            // myNumber = 10; // Error: cannot modify member variable
-            std::cout << myNumber << std::endl;
-        }
-    };
-    ```
-
-- **Constant Function Parameters**: `const` can be used with function parameters to prevent the function from modifying the arguments passed to it.
-    ```cpp
-    void printValue(const int value) {
-        // value = 20; // Error: cannot modify a const parameter
-        std::cout << value << std::endl;
-    }
-    ```
-
-Using `const` helps to prevent accidental modifications and makes the code more predictable and easier to understand.
-
-</p>
-<br>
-
 ### Visibility
 
 <p align="justify">
@@ -742,64 +924,7 @@ Using accessors helps to enforce encapsulation by providing a controlled interfa
 
 </p>
 
-### Comparisons
 
-<p align="justify">
-
-In C++, comparisons are used to determine the relationship between two objects or values. This is typically done using comparison operators such as `==`, `!=`, `<`, `>`, `<=`, and `>=`. These operators can be overloaded in classes to provide custom comparison logic for objects.
-
-- **Equality Operator (`==`)**: Checks if two objects or values are equal.
-    ```cpp
-    class MyClass {
-    public:
-        int myNumber;
-
-        bool operator==(const MyClass& other) const {
-            return myNumber == other.myNumber;
-        }
-    };
-    ```
-
-- **Inequality Operator (`!=`)**: Checks if two objects or values are not equal.
-    ```cpp
-    class MyClass {
-    public:
-        int myNumber;
-
-        bool operator!=(const MyClass& other) const {
-            return myNumber != other.myNumber;
-        }
-    };
-    ```
-
-- **Relational Operators (`<`, `>`, `<=`, `>=`)**: These operators are used to compare the relative order of two objects or values.
-    ```cpp
-    class MyClass {
-    public:
-        int myNumber;
-
-        bool operator<(const MyClass& other) const {
-            return myNumber < other.myNumber;
-        }
-
-        bool operator>(const MyClass& other) const {
-            return myNumber > other.myNumber;
-        }
-
-        bool operator<=(const MyClass& other) const {
-            return myNumber <= other.myNumber;
-        }
-
-        bool operator>=(const MyClass& other) const {
-            return myNumber >= other.myNumber;
-        }
-    };
-    ```
-
-Overloading these operators allows objects of custom classes to be compared in a natural and intuitive way, similar to built-in types. This is particularly useful for sorting, searching, and other operations that rely on comparisons.
-
-</p>
-<br>
 
 ### Non-Member Attributes and Non-Member Functions
 
@@ -921,51 +1046,6 @@ Regardless of the extension used, header files should include include guards or 
 </p>
 <br>
 
-### `do/while` Statement
-
-<p align="justify">
-
-The `do/while` statement in C++ is a control flow statement that allows you to execute a block of code repeatedly based on a given condition. Unlike the `while` loop, which checks the condition before executing the loop body, the `do/while` loop checks the condition after executing the loop body. This ensures that the loop body is executed at least once, regardless of whether the condition is initially true or false.
-
-The syntax for the `do/while` loop is as follows:
-```cpp
-do {
-    // Code to be executed
-} while (condition);
-```
-
-The `do/while` loop is useful when you need to ensure that the loop body is executed at least once, such as when prompting a user for input and validating it within the loop.
-
-</p>
-<br>
-
-### Ternary Operator
-
-<p align="justify">
-
-The ternary operator in C++ is a concise way to perform conditional operations. It is also known as the conditional operator and is represented by the `?` and `:` symbols. The ternary operator takes three operands: a condition, an expression to evaluate if the condition is true, and an expression to evaluate if the condition is false. The syntax for the ternary operator is as follows:
-
-```cpp
-condition ? expression_if_true : expression_if_false;
-```
-
-</p>
-<br>
-
-### `for` Loop Syntax
-
-<p align="justify">
-
-The `for` loop in C++ is a control flow statement that allows you to execute a block of code repeatedly with a specific initialization, condition, and iteration expression. It is commonly used for iterating over arrays, containers, or performing a fixed number of iterations. The syntax for the `for` loop is as follows:
-
-```cpp
-for (initialization; condition; iteration) {
-    // Code to be executed
-}
-```
-
-</p>
-<br>
 
 ## Process for ex02
 
@@ -1006,6 +1086,7 @@ A useful tool for viewing the differences between logs is [Diffchecker](https://
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Course Index (Italian)](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/01Indice.html): An Italian reference that provides a comprehensive index of lessons on C++ programming.
 
 ## Support and Contributions
 
