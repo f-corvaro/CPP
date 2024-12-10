@@ -40,7 +40,6 @@
     <a href="#classes-and-instances">Classes and Instances</a><br>
     <a href="#this">`this`</a><br>
     <a href="#initialization-list">Initialization list</a><br>
-    <a href="#const">`const`</a><br>
     <a href="#visibility">Visibility</a><br>
     <a href="#class-vs-struct">Class vs Struct</a><br>
     <a href="#accessors">Accessors</a><br>
