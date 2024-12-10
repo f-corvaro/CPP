@@ -17,7 +17,26 @@
 
 <h3 align="center">Index</h3>
 <p align="center">
-
+    <a href="#introduction">Introduction</a><br>
+    <a href="#overview">Overview</a><br>
+    <a href="#folder-structure">Folder Structure</a><br>
+    <a href="#important-guidelines">Important Guidelines</a><br>
+    <a href="#compiling">Compiling</a><br>
+    <a href="#formatting-and-naming-conventions">Formatting and Naming Conventions</a><br>
+    <a href="#allowedforbidden">Allowed/Forbidden</a><br>
+    <a href="#design-requirements">Design Requirements</a><br>
+    <a href="#additional-notes">Additional Notes</a><br>
+    <a href="#project-requirements---mandatory-part">Project Requirements - Mandatory Part</a><br>
+    <a href="#theoretical-background">Theoretical Background</a><br>
+    <a href="#subtype-polymorphism">Subtype Polymorphism</a><br>
+    <a href="#abstract-classes">Abstract Classes</a><br>
+    <a href="#interfaces">Interfaces</a><br>
+    <a href="#multiple-inheritance">Multiple Inheritance</a><br>
+    <a href="#diamond-problem">Diamond Problem</a><br>
+    <a href="#developed-skills">Developed Skills</a><br>
+    <a href="#references">References</a><br>
+    <a href="#support-and-contributions">Support and Contributions</a><br>
+    <a href="#author">Author</a><br>
 </p>
 <br>
 
@@ -197,20 +216,159 @@ To successfully complete the project, you need to submit up to `ex02`. To achiev
 
 ## Theoretical Background
 
-### Sub-typing Polymorphism
+### Subtype Polymorphism
 
 <p align="justify">
 
-Sub-typing polymorphism, also known as runtime polymorphism, is a feature in C++98 that allows a pointer or reference to a base class to refer to objects of derived classes. This enables the use of a single interface to represent different underlying forms (data types). Sub-typing polymorphism is achieved through the use of virtual functions in the base class, which can be overridden by derived classes. When a virtual function is called on a base class pointer or reference, the appropriate function implementation in the derived class is executed. This allows for dynamic method binding and enables more flexible and extensible code.
+Subtype polymorphism, also known as runtime polymorphism, is a feature in C++98 that allows a pointer or reference to a base class to refer to objects of derived classes. This enables the use of a single interface to represent different underlying forms (data types). Subtype polymorphism is achieved through the use of virtual functions in the base class, which can be overridden by derived classes. When a virtual function is called on a base class pointer or reference, the appropriate function implementation in the derived class is executed. This allows for dynamic method binding and enables more flexible and extensible code.
+
+Example of subtype polymorphism:
+```cpp
+class Base {
+public:
+    virtual void display() {
+        std::cout << "Base class display" << std::endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void display() override {
+        std::cout << "Derived class display" << std::endl;
+    }
+};
+
+void show(Base& obj) {
+    obj.display();
+}
+
+int main() {
+    Base b;
+    Derived d;
+    show(b); // Calls Base::display
+    show(d); // Calls Derived::display
+    return 0;
+}
+```
 
 </p>
 <br>
 
-### Abstract Classes and Interfaces
+### Abstract Classes
 
 <p align="justify">
+In C++98, abstract classes are classes that cannot be instantiated and are designed to be inherited by other classes. An abstract class is declared by including at least one pure virtual function, which is a virtual function with no implementation and is specified by assigning 0 to it. Pure virtual functions define an interface that derived classes must implement. Abstract classes serve as a blueprint for other classes, ensuring that certain functions are implemented in derived classes. While C++98 does not have a separate keyword for interfaces like some other languages, abstract classes with only pure virtual functions can effectively serve as interfaces, providing a way to define a contract for derived classes to follow.
 
-In C++98, abstract classes are classes that cannot be instantiated and are designed to be inherited by other classes. An abstract class is declared by including at least one pure virtual function, which is a virtual function with no implementation and is specified by assigning `0` to it. Pure virtual functions define an interface that derived classes must implement. Abstract classes serve as a blueprint for other classes, ensuring that certain functions are implemented in derived classes. While C++98 does not have a separate keyword for interfaces like some other languages, abstract classes with only pure virtual functions can effectively serve as interfaces, providing a way to define a contract for derived classes to follow.
+Example of an abstract class:
+
+```cpp
+class AbstractBase {
+public:
+    virtual void display() = 0; // Pure virtual function
+};
+
+class Derived : public AbstractBase {
+public:
+    void display() override {
+        std::cout << "Derived class display" << std::endl;
+    }
+};
+```
+
+</p>
+<br>
+
+### Interfaces
+
+<p align="justify">
+In C++98, interfaces are typically implemented using abstract classes that contain only pure virtual functions. These abstract classes define a set of functions that derived classes must implement, providing a way to enforce a contract for derived classes to follow. Interfaces are used to define common behaviors that can be shared across different classes, enabling polymorphism and promoting code reuse. By using interfaces, you can design flexible and extensible software architectures that allow different classes to interact through a common set of functions.
+
+Example of an interface:
+
+```cpp
+class IShape {
+public:
+    virtual double area() const = 0;
+    virtual double perimeter() const = 0;
+};
+
+class Circle : public IShape {
+private:
+    double radius;
+public:
+    Circle(double r) : radius(r) {}
+    double area() const override {
+        return 3.14159 * radius * radius;
+    }
+    double perimeter() const override {
+        return 2 * 3.14159 * radius;
+    }
+};
+```
+
+</p>
+<br>
+
+### Multiple Inheritance
+
+<p align="justify">
+Multiple inheritance is a feature in C++98 that allows a class to inherit from more than one base class. This enables a derived class to combine the behaviors and properties of multiple base classes. While multiple inheritance can be useful for creating complex class hierarchies, it also introduces potential issues such as ambiguity and increased complexity. Careful design and consideration are required when using multiple inheritance to ensure that the resulting class hierarchy is maintainable and free of conflicts.
+
+Example of multiple inheritance:
+
+```cpp
+class Base1 {
+public:
+    void display() {
+        std::cout << "Base1 display" << std::endl;
+    }
+};
+
+class Base2 {
+public:
+    void display() {
+        std::cout << "Base2 display" << std::endl;
+    }
+};
+
+class Derived : public Base1, public Base2 {
+public:
+    void show() {
+        Base1::display(); // Resolve ambiguity
+        Base2::display(); // Resolve ambiguity
+    }
+};
+```
+
+</p>
+<br>
+
+### Diamond Problem
+
+<p align="justify">
+The diamond problem is a specific issue that arises in multiple inheritance when a class inherits from two classes that both inherit from a common base class. This can lead to ambiguity and redundancy, as the derived class may end up with multiple copies of the base class. The diamond problem is named after the diamond-shaped inheritance diagram that results from this scenario. In C++98, the diamond problem can be resolved using virtual inheritance, which ensures that only one instance of the base class is shared among all derived classes.
+
+Example of resolving the diamond problem with virtual inheritance:
+
+```cpp
+class Base {
+public:
+    void display() {
+        std::cout << "Base class display" << std::endl;
+    }
+};
+
+class Derived1 : virtual public Base {};
+class Derived2 : virtual public Base {};
+
+class Diamond : public Derived1, public Derived2 {};
+
+int main() {
+    Diamond d;
+    d.display(); // No ambiguity, single instance of Base
+    return 0;
+}
+```
 
 </p>
 <br>
@@ -228,7 +386,7 @@ In C++98, abstract classes are classes that cannot be instantiated and are desig
 - [42 Intra - C++ Basics](https://elearning.intra.42.fr/notions/piscine-c-d00-c-basics/subnotions): This link provides access to tutorials and explanations for C++ basics on the 42 Intra platform. (The access is allowed only for the 42 students).
 - [cplusplus.com](https://cplusplus.com/): A comprehensive resource for C++ documentation and tutorials.
 - [42 Cursus Guide - CPP Modules](https://42-cursus.gitbook.io/guide/rank-04/cpp-00-04-doing): A guide for the CPP modules in the 42 curriculum.
-- [CNR Area Territoriale di Ricerca di Bologna - C++ Virtual Functions](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/32Virtual.html): An Italian reference that explains the concept of virtual functions in C++ and their usage context.
+- [CNR Area Territoriale di Ricerca di Bologna - C++ Course Index (Italian)](http://www-old.bo.cnr.it/corsi-di-informatica/corsoCstandard/Lezioni/01Indice.html): An Italian reference that provides a comprehensive index of lessons on C++ programming.
 
 ## Support and Contributions
 
