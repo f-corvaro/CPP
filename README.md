@@ -126,9 +126,9 @@ During the development of these projects, you will study the following main conc
   - Initialization Lists
   - Static and Const Keywords
 
-[![fcorvaro's 42 CPP00 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+  [![fcorvaro's 42 CPP00 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project): Memory Allocation, References, Pointers
 
@@ -140,9 +140,9 @@ During the development of these projects, you will study the following main conc
   - Function Overloading
   - Operator Overloading
 
-[![fcorvaro's 42 CPP01 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+  [![fcorvaro's 42 CPP01 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 2. [CPP02](https://github.com/f-corvaro/CPP/tree/main/CPP02) (C++ - single project): Ad-hoc Polymorphism, Operator Overloading
 
@@ -152,10 +152,9 @@ During the development of these projects, you will study the following main conc
   - Virtual Functions
   - Abstract Classes
 
-[![fcorvaro's 42 CPP02 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+  [![fcorvaro's 42 CPP02 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
-
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project): Inheritance
 
@@ -165,9 +164,9 @@ During the development of these projects, you will study the following main conc
   - Abstraction
   - Construction and Destruction Order
 
-[![fcorvaro's 42 CPP03 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+  [![fcorvaro's 42 CPP03 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 4. [CPP04](https://github.com/f-corvaro/CPP/tree/main/CPP04) (C++ - single project): Subtype Polymorphism, Abstract Classes, Interfaces
 
@@ -177,9 +176,9 @@ During the development of these projects, you will study the following main conc
   - Multiple Inheritance
   - Diamond Problem
 
-[![fcorvaro's 42 CPP04 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
+  [![fcorvaro's 42 CPP04 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers``` 
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers``` 
 
 ### 5. [CPP05](https://github.com/f-corvaro/CPP/tree/main/CPP05) (C++ - single project): Repetition, Exceptions
 
@@ -188,9 +187,9 @@ During the development of these projects, you will study the following main conc
   - Custom Exceptions
   - RAII (Resource Acquisition Is Initialization)
 
-**Status:** Coming Soon
+  **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 6. [CPP06](https://github.com/f-corvaro/CPP/tree/main/CPP06) (C++ - single project): C++ Casts
 
@@ -200,9 +199,9 @@ During the development of these projects, you will study the following main conc
   - Const Cast
   - Reinterpret Cast
 
-**Status:** Coming Soon
+  **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 7. [CPP07](https://github.com/f-corvaro/CPP/tree/main/CPP07) (C++ - single project): Templates
 
@@ -211,9 +210,9 @@ During the development of these projects, you will study the following main conc
   - Template Specialization
   - Variadic Templates
 
-**Status:** Coming Soon
+  **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 8. [CPP08](https://github.com/f-corvaro/CPP/tree/main/CPP08) (C++ - single project): Templated Containers, Iterators, Algorithms
 
@@ -223,9 +222,9 @@ During the development of these projects, you will study the following main conc
   - Algorithms
   - Functors
 
-**Status:** Coming Soon
+  **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 ### 9. [CPP09](https://github.com/f-corvaro/CPP/tree/main/CPP09) (C++ - single project): C++98, C++03
 
@@ -235,9 +234,9 @@ During the development of these projects, you will study the following main conc
   - Weak Pointer
   - Custom Deleters
 
-**Status:** Coming Soon
+  **Status:** Coming Soon
 
-```Evaluation Length = 15/30 Mins``` | ```2 Peers```
+  ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
 </p>
 
