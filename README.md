@@ -115,16 +115,16 @@ During the development of these projects, you will study the following main conc
 
 ### 0. [CPP00](https://github.com/f-corvaro/CPP/tree/main/CPP00) (C++ - single project): Basics, Classes, Objects
 
-  - Introduction to C++
-  - Basic Syntax and Data Types
-  - Control Structures
-  - Functions
-  - Namespaces
-  - Classes and Objects
-  - Member Functions
-  - I/O Streams
-  - Initialization Lists
-  - Static and Const Keywords
+- **Introduction to C++**: Overview of the language and its features.
+- **Basic Syntax and Data Types**: Understanding variables, data types, and basic syntax.
+- **Control Structures**: Using `if`, `else`, `switch`, loops (`for`, `while`, `do-while`).
+- **Functions**: Defining and calling functions, passing arguments, and return values.
+- **Namespaces**: Understanding and using namespaces to avoid naming conflicts.
+- **Classes and Objects**: Introduction to object-oriented programming, defining classes, and creating objects.
+- **Member Functions**: Implementing and using member functions within classes.
+- **I/O Streams**: Using `cin`, `cout`, and file streams for input and output operations.
+- **Initialization Lists**: Using initialization lists in constructors for efficient member initialization.
+- **Static and Const Keywords**: Understanding the use of `static` and `const` for variables, functions, and class members.
 
   [![fcorvaro's 42 CPP00 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
@@ -132,13 +132,13 @@ During the development of these projects, you will study the following main conc
 
 ### 1. [CPP01](https://github.com/f-corvaro/CPP/tree/main/CPP01) (C++ - single project): Memory Allocation, References, Pointers
 
-  - Memory Allocation
-  - Heap and Stack Allocation
-  - Copy Constructor
-  - Copy Assignment Operator
-  - Destructor
-  - Function Overloading
-  - Operator Overloading
+- **Memory Allocation**: Understanding dynamic memory allocation and deallocation using `new` and `delete`.
+- **Heap and Stack Allocation**: Differentiating between memory allocated on the heap and the stack.
+- **Copy Constructor**: Creating a new object as a copy of an existing object.
+- **Copy Assignment Operator**: Assigning the values from one object to another existing object.
+- **Destructor**: Cleaning up resources when an object is destroyed.
+- **Function Overloading**: Defining multiple functions with the same name but different parameter lists.
+- **Operator Overloading**: Customizing the behavior of operators for user-defined types.
 
   [![fcorvaro's 42 CPP01 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
@@ -146,11 +146,11 @@ During the development of these projects, you will study the following main conc
 
 ### 2. [CPP02](https://github.com/f-corvaro/CPP/tree/main/CPP02) (C++ - single project): Ad-hoc Polymorphism, Operator Overloading
 
-  - Ad-hoc Polymorphism
-  - Operator Overloading
-  - Inheritance
-  - Virtual Functions
-  - Abstract Classes
+- **Ad-hoc Polymorphism**: Using function overloading and operator overloading to achieve polymorphic behavior.
+- **Operator Overloading**: Customizing the behavior of operators for user-defined types.
+- **Inheritance**: Establishing a hierarchy between classes and reusing code from base classes.
+- **Virtual Functions**: Enabling dynamic polymorphism by overriding base class methods in derived classes.
+- **Abstract Classes**: Defining classes that cannot be instantiated and serve as blueprints for derived classes.
 
   [![fcorvaro's 42 CPP02 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
@@ -158,11 +158,11 @@ During the development of these projects, you will study the following main conc
 
 ### 3. [CPP03](https://github.com/f-corvaro/CPP/tree/main/CPP03) (C++ - single project): Inheritance
 
-  - Inheritance
-  - Polymorphism
-  - Encapsulation
-  - Abstraction
-  - Construction and Destruction Order
+- **Inheritance**: Establishing a hierarchy between classes and reusing code from base classes.
+- **Polymorphism**: Using base class pointers or references to interact with derived class objects.
+- **Encapsulation**: Restricting access to certain class members to ensure controlled interaction.
+- **Abstraction**: Hiding implementation details and exposing only essential features.
+- **Construction and Destruction Order**: Understanding the order in which constructors and destructors are called in inheritance hierarchies.
 
   [![fcorvaro's 42 CPP03 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
@@ -170,11 +170,11 @@ During the development of these projects, you will study the following main conc
 
 ### 4. [CPP04](https://github.com/f-corvaro/CPP/tree/main/CPP04) (C++ - single project): Subtype Polymorphism, Abstract Classes, Interfaces
 
-  - Subtype Polymorphism
-  - Interfaces
-  - Abstract Classes
-  - Multiple Inheritance
-  - Diamond Problem
+- **Subtype Polymorphism**: Using base class pointers or references to achieve runtime polymorphism.
+- **Interfaces**: Defining abstract classes with pure virtual functions to enforce a contract for derived classes.
+- **Abstract Classes**: Creating classes that cannot be instantiated and serve as blueprints for derived classes.
+- **Multiple Inheritance**: Combining behaviors and properties from multiple base classes.
+- **Diamond Problem**: Resolving ambiguity in multiple inheritance using virtual inheritance.
 
   [![fcorvaro's 42 CPP04 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
@@ -182,10 +182,10 @@ During the development of these projects, you will study the following main conc
 
 ### 5. [CPP05](https://github.com/f-corvaro/CPP/tree/main/CPP05) (C++ - single project): Repetition, Exceptions
 
-  - Exception Handling
-  - Standard Exceptions
-  - Custom Exceptions
-  - RAII (Resource Acquisition Is Initialization)
+ - **Exception Handling**: Understanding and implementing exception handling mechanisms in C++ using `try`, `catch`, and `throw`.
+- **Custom Exceptions**: Creating and using custom exception classes to handle specific error scenarios.
+- **RAII (Resource Acquisition Is Initialization)**: Managing resources effectively to ensure proper cleanup in the presence of exceptions.
+- **Best Practices**: Writing robust and maintainable code by handling exceptions appropriately.
 
   **Status:** Coming Soon
 
