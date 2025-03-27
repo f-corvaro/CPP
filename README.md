@@ -185,7 +185,6 @@ During the development of these projects, you will study the following main conc
  - **Exception Handling**: Understanding and implementing exception handling mechanisms in C++ using `try`, `catch`, and `throw`.
 - **Custom Exceptions**: Creating and using custom exception classes to handle specific error scenarios.
 - **RAII (Resource Acquisition Is Initialization)**: Managing resources effectively to ensure proper cleanup in the presence of exceptions.
-- **Best Practices**: Writing robust and maintainable code by handling exceptions appropriately.
 
   **Status:** Coming Soon
 
