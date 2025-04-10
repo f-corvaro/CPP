@@ -6,7 +6,6 @@
 	<b><i>"Master the essentials of C++ programming and project development."</i></b><br>
 </p>
 <p align="center" style="text-decoration: none;">
-	<a href="https://github.com/f-corvaro/CPP/blob/main/.extra/cpp03.pdf"><img alt="subject" src="https://img.shields.io/badge/subject-CPP03-yellow" /></a>
     <a href="https://github.com/f-corvaro/CPP"><img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/f-corvaro/CPP?color=blueviolet" /></a>
     <a href="https://github.com/f-corvaro/CPP"><img alt="Code language count" src="https://img.shields.io/github/languages/count/f-corvaro/CPP?color=yellow" /></a>
     <a href="https://github.com/f-corvaro/CPP"><img alt="GitHub top language" src="https://img.shields.io/github/languages/top/f-corvaro/CPP?color=blueviolet" /></a>

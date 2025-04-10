@@ -1,0 +1,170 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fcorvaro <fcorvaro@student.42roma.it>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/26 15:19:47 by fcorvaro          #+#    #+#             */
+/*   Updated: 2025/03/27 12:08:17 by fcorvaro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Bureaucrat.hpp"
+#include <iostream>
+#include <stdexcept>
+
+/**
+ * @brief Default constructor.
+ * 
+ * Initializes the bureaucrat with a default name and grade of 150.
+ */
+Bureaucrat::Bureaucrat() : name(""), grade(150) {}
+
+/**
+ * @brief Parameterized constructor.
+ * 
+ * Initializes the bureaucrat with a given name and grade.
+ * 
+ * @param name The name of the bureaucrat.
+ * @param grade The grade of the bureaucrat.
+ * @throws GradeTooHighException if the grade is less than 1.
+ * @throws GradeTooLowException if the grade is greater than 150.
+ */
+Bureaucrat::Bureaucrat(const std::string& name, int grade) : name(name) 
+{
+    validateGrade(grade);
+    this->grade = grade;
+}
+
+/**
+ * @brief Copy constructor.
+ * 
+ * Creates a copy of another Bureaucrat object.
+ * 
+ * @param other The Bureaucrat object to copy.
+ */
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade) {}
+
+/**
+ * @brief Copy assignment operator.
+ *  
+ * Assigns the values of another Bureaucrat object to this one.
+ *  
+ * @param other The Bureaucrat object to assign from.
+ * @return Bureaucrat& Reference to the assigned object.
+ */
+Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) 
+{
+    if (this != &other) {
+        this->grade = other.grade;
+    }
+    return *this;
+}
+
+/**
+ * @brief Destructor.
+ * 
+ * Cleans up the Bureaucrat object.
+ */
+Bureaucrat::~Bureaucrat() {}
+
+/**
+ * @brief Gets the name of the bureaucrat.
+ * 
+ * @return const std::string& The name of the bureaucrat.
+ */
+const std::string& Bureaucrat::getName() const 
+{
+    return name;
+}
+
+/**
+ * @brief Gets the grade of the bureaucrat.
+ * 
+ * @return int The grade of the bureaucrat.
+ */
+int Bureaucrat::getGrade() const 
+{
+    return grade;
+}
+
+/**
+ * @brief Increments the grade of the bureaucrat.
+ * 
+ * Decreases the grade by 1 (higher rank).
+ * @throws GradeTooHighException if the grade becomes less than 1.
+ */
+void Bureaucrat::incrementGrade() 
+{
+    validateGrade(grade - 1);
+    --grade;
+}
+
+/**
+ * @brief Decrements the grade of the bureaucrat.
+ * 
+ * Increases the grade by 1 (lower rank).
+ * @throws GradeTooLowException if the grade becomes greater than 150.
+*/
+void Bureaucrat::decrementGrade() 
+{
+    validateGrade(grade + 1);
+    ++grade;
+}
+
+/**
+ * @brief Validates the grade.
+ * 
+ * Ensures that the grade is within the valid range (1 to 150).
+ * Throws an exception if the grade is invalid.
+ * 
+ * @param grade The grade to validate.
+ * @throws GradeTooHighException if the grade is less than 1.
+ * @throws GradeTooLowException if the grade is greater than 150.
+ */
+void Bureaucrat::validateGrade(int grade) 
+{
+    if (grade < 1) 
+    {
+        throw GradeTooHighException();
+    }
+    if (grade > 150) 
+    {
+        throw GradeTooLowException();
+    }
+}
+
+/**
+ * @class GradeTooHighException
+ * @brief Exception thrown when the grade is too high.
+ */
+const char* Bureaucrat::GradeTooHighException::what() const throw() 
+{
+    return "Grade is too high!";
+}
+
+/**
+ * @class GradeTooLowException
+ * @brief Exception thrown when the grade is too low.
+ */
+const char* Bureaucrat::GradeTooLowException::what() const throw() 
+{
+    return "Grade is too low!";
+}
+
+/**
+ * @brief Overloads the insertion operator for Bureaucrat.
+ * 
+ * Prints the bureaucrat's name and grade in the format:
+ * "<name>, bureaucrat grade <grade>."
+ * 
+ * @param os The output stream.
+ * @param bureaucrat The Bureaucrat object to print.
+ * @return std::ostream& The output stream.
+ */
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& bureaucrat) 
+{
+    os << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade() << ".";
+    return os;
+}

@@ -186,7 +186,7 @@ During the development of these projects, you will study the following main conc
 - **Custom Exceptions**: Creating and using custom exception classes to handle specific error scenarios.
 - **RAII (Resource Acquisition Is Initialization)**: Managing resources effectively to ensure proper cleanup in the presence of exceptions.
 
-  **Status:** Coming Soon
+  [![fcorvaro's 42 CPP05 Score](https://github.com/f-corvaro/42.common_core/blob/main/.extra/100.png)](https://profile.intra.42.fr/users/fcorvaro)
 
   ```Evaluation Length = 15/30 Mins``` | ```2 Peers```
 
